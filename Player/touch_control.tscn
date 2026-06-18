@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://ci48dtaw2atde"]
+
+[ext_resource type="Texture2D" uid="uid://d05ucxwde8ngo" path="res://Player/Sprite/Shoot.png" id="1_kili7"]
+[ext_resource type="Texture2D" uid="uid://bwd36fb6cel6d" path="res://Player/fin_arrow.png" id="2_r4n6s"]
+
+[node name="Touch_Control" type="Node2D" unique_id=744810894]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=789684816]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=927345170]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Shoot" type="TouchScreenButton" parent="CanvasLayer/TextureRect" unique_id=1313217610]
+modulate = Color(1, 1, 1, 0.6392157)
+position = Vector2(332, 203)
+scale = Vector2(0.06653226, 0.06854839)
+texture_normal = ExtResource("1_kili7")
+action = "shoot"
+
+[node name="Left" type="TouchScreenButton" parent="CanvasLayer/TextureRect" unique_id=1933204984]
+modulate = Color(1, 1, 1, 0.4)
+position = Vector2(37.999992, 237)
+rotation = -1.5707964
+scale = Vector2(0.16, 0.16)
+texture_normal = ExtResource("2_r4n6s")
+action = "move_left"
+
+[node name="Right" type="TouchScreenButton" parent="CanvasLayer/TextureRect" unique_id=2137220938]
+modulate = Color(1, 1, 1, 0.4)
+position = Vector2(162, 207)
+rotation = 1.5707964
+scale = Vector2(0.16, 0.16)
+texture_normal = ExtResource("2_r4n6s")
+action = "move_right"
+
+[node name="Jump" type="TouchScreenButton" parent="CanvasLayer/TextureRect" unique_id=926846697]
+modulate = Color(1, 1, 1, 0.4)
+position = Vector2(396, 151)
+scale = Vector2(0.16, 0.16)
+texture_normal = ExtResource("2_r4n6s")
+action = "jump"
+
+[node name="Down" type="TouchScreenButton" parent="CanvasLayer/TextureRect" unique_id=1381275563]
+modulate = Color(1, 1, 1, 0.4)
+position = Vector2(67.00001, 184)
+rotation = 3.1415927
+scale = Vector2(0.16, 0.16)
+texture_normal = ExtResource("2_r4n6s")
+action = "down"
