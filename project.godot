@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-SceneManager="*uid://p852rnxhxfr3"
+TransitionScreen="*uid://blfh7l2fedt8k"
 
 [display]
 
@@ -26,6 +26,10 @@ window/size/viewport_height=270
 window/size/window_width_override=1440
 window/size/window_height_override=810
 window/stretch/mode="canvas_items"
+
+[global_group]
+
+Player=""
 
 [input]
 

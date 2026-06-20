@@ -1,0 +1,74 @@
+[gd_scene format=4 uid="uid://iu32ct0qu7ik"]
+
+[ext_resource type="Script" uid="uid://c0hfyvhskxx37" path="res://Levels/02_Nazanaza/03_03.gd" id="1_03uaw"]
+[ext_resource type="Script" uid="uid://f4npxarc848j" path="res://General/Scripts/Level_Bounds.gd" id="1_421oh"]
+[ext_resource type="TileSet" uid="uid://dwy86addhdxph" path="res://Levels/Hason Nogor/Tileset/Hason_Nogor.tres" id="2_qje4y"]
+[ext_resource type="PackedScene" uid="uid://do5bbbadoprra" path="res://Player/player.tscn" id="3_8ndph"]
+[ext_resource type="TileSet" uid="uid://1kr8vdmarlj2" path="res://Levels/Hason Nogor/Tileset/Hason_Nogor_2.tres" id="4_8ndph"]
+[ext_resource type="Texture2D" uid="uid://bxvaouor6knsp" path="res://Levels/Nazanaza/03_03.png" id="5_8itse"]
+[ext_resource type="Texture2D" uid="uid://bscwskvydiv3k" path="res://Levels/shado_2.png" id="6_03uaw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_04v7c"]
+size = Vector2(94, 29.5)
+
+[node name="03_03" type="Node2D" unique_id=1482658180]
+script = ExtResource("1_03uaw")
+
+[node name="Level_Bounds" type="Node2D" parent="." unique_id=1171283765]
+z_index = 256
+script = ExtResource("1_421oh")
+width = 1232
+hight = 302
+metadata/_custom_type_script = "uid://f4npxarc848j"
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=249641153]
+z_index = -2
+tile_map_data = PackedByteArray("AAAAAAAAAAAVAAQAAAAAAAEAAAAVAAQAAAAAAAIAAAAVAAQAAAAAAAMAAAAVAAQAAAAAAAQAAAAVAAQAAAAAAAUAAAAVAAQAAAAAAAYAAAAVAAQAAAAAAAcAAAAVAAQAAAAAAAgAAAAVAAQAAAAAAAkAAAAVAAQAAAABAAgAAAABAAAAAAABAAkAAAABAAEAAAACAAgAAAACAAAAAAACAAkAAAACAAEAAAADAAgAAAADAAAAAAADAAkAAAADAAEAAAAEAAgAAAAAAAMAAAAFAAgAAAAEAAEAAAAKAAUAAAAEAAAAAAAKAAYAAAAEAAIAAAAJAAUAAAAAAAAAAAAJAAYAAAAAAAIAAAAPAAgAAAAEAAAAAAAPAAkAAAAEAAEAAAAOAAgAAAAAAAAAAAAOAAkAAAAAAAIAAAAEAAcAAAAAAAAAAAAFAAcAAAAEAAAAAAATAAQAAAAAAAAAAAAUAAQAAAAEAAAAAAATAAUAAAAAAAEAAAATAAYAAAAAAAIAAAAUAAUAAAAEAAEAAAAUAAYAAAAEAAEAAAATAAcAAAAAAAEAAAATAAgAAAAAAAIAAAAUAAcAAAAEAAIAAAAUAAgAAAAEAAIAAAATAAkAAAAAAAIAAAAUAAkAAAAEAAIAAAAAAP//AAAMAAkAAAABAP//AAAMAAkAAAACAP//AAAMAAkAAAADAP//AAAMAAkAAAAEAP//AAAMAAkAAAAFAP//AAAMAAkAAAAGAP//AAAMAAkAAAAHAP//AAAMAAkAAAAIAP//AAAMAAkAAAAJAP//AAAMAAkAAAAKAP//AAAMAAkAAAALAP//AAAMAAkAAAAMAP//AAAMAAkAAAANAP//AAAMAAkAAAAOAP//AAAMAAkAAAAPAP//AAAMAAkAAAAQAP//AAAMAAkAAAARAP//AAAMAAkAAAASAP//AAAMAAkAAAATAP//AAAMAAkAAAAUAP//AAAMAAkAAAAVAP//AAAMAAkAAAAWAP//AAAMAAkAAAAXAP//AAAMAAkAAAAYAP//AAAMAAkAAAAZAP//AAAMAAkAAAAaAP//AAAMAAkAAAAbAP//AAAMAAkAAAAcAP//AAAMAAkAAAAdAP//AAAMAAkAAAAeAP//AAAMAAkAAAAfAP//AAAMAAkAAAAgAP//AAAMAAkAAAAhAP//AAAMAAkAAAAiAP//AAAMAAkAAAAjAP//AAAMAAkAAAAkAP//AAAMAAkAAAAlAP//AAAMAAkAAAAmAP//AAAMAAkAAAAmAAAAAAAMAAkAAAAmAAEAAAAMAAkAAAAmAAIAAAAMAAkAAAAmAAMAAAAMAAkAAAAmAAQAAAAMAAkAAAAmAAUAAAAMAAkAAAAmAAYAAAAMAAkAAAAmAAcAAAAMAAkAAAAmAAgAAAAMAAkAAAAmAAkAAAAMAAkAAAAfAAYAAAAAAAAAAAAfAAcAAAAAAAEAAAAfAAgAAAAAAAIAAAAfAAkAAAAAAAIAAAAgAAYAAAABAAAAAAAgAAcAAAABAAEAAAAgAAgAAAABAAIAAAAgAAkAAAABAAMAAAAhAAYAAAACAAAAAAAhAAcAAAACAAEAAAAhAAgAAAACAAIAAAAhAAkAAAACAAMAAAAiAAYAAAADAAAAAAAiAAcAAAADAAEAAAAiAAgAAAADAAIAAAAiAAkAAAADAAMAAAAjAAYAAAAEAAAAAAAjAAcAAAAEAAEAAAAjAAgAAAAEAAIAAAAjAAkAAAAEAAIAAAAaAAYAAAAHAAgAAAAFAAkAAAAEAAEAAAAEAAkAAAAEAAEAAAAOAAMAAAAAAAAAAAAPAAMAAAAEAAAAAAAaAAcAAAAHAAkAAAAaAAgAAAAHAAkAAAAaAAkAAAAHAAkAAAA=")
+tile_set = ExtResource("2_qje4y")
+
+[node name="Player" parent="." unique_id=679804264 instance=ExtResource("3_8ndph")]
+position = Vector2(77, 226)
+
+[node name="0303" type="Sprite2D" parent="." unique_id=1946336712]
+z_index = -3
+position = Vector2(617, 121.99999)
+scale = Vector2(1.7123657, 1.9461205)
+texture = ExtResource("5_8itse")
+
+[node name="Shado2" type="Sprite2D" parent="." unique_id=1818501334]
+position = Vector2(206.00003, 138.99997)
+scale = Vector2(0.30078122, 0.34469324)
+texture = ExtResource("6_03uaw")
+
+[node name="Shado3" type="Sprite2D" parent="." unique_id=1873977088]
+position = Vector2(965.60455, 145.65337)
+rotation = 3.1415927
+scale = Vector2(0.37160864, 0.3492632)
+texture = ExtResource("6_03uaw")
+
+[node name="Shado4" type="Sprite2D" parent="." unique_id=1586509092]
+position = Vector2(618.98596, 109.10516)
+rotation = 1.5707964
+scale = Vector2(0.19813979, 1.2217271)
+texture = ExtResource("6_03uaw")
+
+[node name="Shado5" type="Sprite2D" parent="." unique_id=1701405837]
+position = Vector2(619, 185)
+rotation = -1.5707964
+scale = Vector2(0.19813979, 1.2217271)
+texture = ExtResource("6_03uaw")
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=1359571130]
+z_index = -3
+tile_map_data = PackedByteArray("AAAOAAMAAQAAAAIAAAAOAAQAAQAAAAEAAAAOAAUAAQAAAAIAAAAOAAYAAQAAAAEAAAAOAAcAAQAAAAIAAAAPAAMAAQAEAAIAAAAPAAQAAQAEAAEAAAAPAAUAAQAEAAIAAAAPAAYAAQAEAAEAAAAPAAcAAQAEAAIAAAAEAAgAAQAAAAMAAAAEAAkAAQAAAAQAAAAFAAgAAQAEAAEAAAAFAAkAAQAEAAIAAAAOAAkAAQAAAAQAAAAPAAkAAQAAAAQAAAAJAAcAAQAAAAEAAAAJAAgAAQAAAAEAAAAJAAkAAQAAAAIAAAAKAAcAAQAEAAEAAAAKAAgAAQAEAAEAAAAKAAkAAQAEAAIAAAA=")
+tile_set = ExtResource("4_8ndph")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=394472606]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1148612092]
+position = Vector2(1185, 304.25)
+shape = SubResource("RectangleShape2D_04v7c")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
