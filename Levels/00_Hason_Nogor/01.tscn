@@ -40,15 +40,15 @@ scale = Vector2(0.5364748, 0.5164861)
 texture = ExtResource("3_nhegs")
 
 [node name="Shado5" type="Sprite2D" parent="." unique_id=2062798216]
-position = Vector2(611.03265, 273.6947)
+position = Vector2(611.03265, 290.2588)
 rotation = -1.5707964
-scale = Vector2(0.30600825, 1.2494463)
+scale = Vector2(0.2844404, 1.2494463)
 texture = ExtResource("3_nhegs")
 
 [node name="Shado6" type="Sprite2D" parent="." unique_id=2019578561]
-position = Vector2(610.60144, 126.284424)
+position = Vector2(610.60144, 99.97674)
 rotation = 1.5707964
-scale = Vector2(0.20220582, 1.2856709)
+scale = Vector2(0.16795102, 1.2856709)
 texture = ExtResource("3_nhegs")
 
 [node name="Shado7" type="Sprite2D" parent="." unique_id=258896597]
@@ -57,9 +57,9 @@ scale = Vector2(0.2594401, 0.5345667)
 texture = ExtResource("3_nhegs")
 
 [node name="Shado8" type="Sprite2D" parent="." unique_id=1242957062]
-position = Vector2(1002.99994, 225.94855)
+position = Vector2(1174.4872, 225.94858)
 rotation = -3.1415925
-scale = Vector2(0.35091147, 0.533329)
+scale = Vector2(0.12762083, 0.533329)
 texture = ExtResource("3_nhegs")
 
 [node name="Level_Bounds" type="Node2D" parent="." unique_id=1231939746]

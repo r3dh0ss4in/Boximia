@@ -1,0 +1,81 @@
+[gd_scene format=4 uid="uid://ca7r23jeyn5pf"]
+
+[ext_resource type="Script" uid="uid://f4npxarc848j" path="res://General/Scripts/Level_Bounds.gd" id="1_bq7yh"]
+[ext_resource type="Script" uid="uid://c14gcfdcx7yw1" path="res://Levels/04_Hansi/05_02.gd" id="1_e8843"]
+[ext_resource type="Texture2D" uid="uid://cpu1dalacmtlc" path="res://Levels/Hansi/05_02.png" id="2_oe83h"]
+[ext_resource type="TileSet" uid="uid://dwy86addhdxph" path="res://Levels/Hason Nogor/Tileset/Hason_Nogor.tres" id="3_e8843"]
+[ext_resource type="PackedScene" uid="uid://do5bbbadoprra" path="res://Player/player.tscn" id="4_6jxfj"]
+[ext_resource type="Texture2D" uid="uid://bscwskvydiv3k" path="res://Levels/shado_2.png" id="5_oe83h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6jxfj"]
+size = Vector2(1002, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e8843"]
+size = Vector2(12, 185)
+
+[node name="05_02" type="Node2D" unique_id=1729588534]
+script = ExtResource("1_e8843")
+
+[node name="Level_Bounds" type="Node2D" parent="." unique_id=624963354]
+z_index = 256
+script = ExtResource("1_bq7yh")
+width = 1104
+hight = 302
+metadata/_custom_type_script = "uid://f4npxarc848j"
+
+[node name="0502" type="Sprite2D" parent="." unique_id=469810460]
+z_index = -3
+position = Vector2(547.99994, 144)
+scale = Vector2(1.4980184, 1.5317461)
+texture = ExtResource("2_oe83h")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1210623404]
+z_index = -2
+position = Vector2(0, 3)
+tile_map_data = PackedByteArray("AAAiAAkAAAAOAAYAAAAhAAkAAAADAAgAAAAfAAkAAAACAAgAAAAgAAkAAAACAAgAAAAXAAYAAAAHAAgAAAAXAAcAAAAHAAkAAAAXAAgAAAAHAAkAAAAXAAkAAAAHAAkAAAATAAQAAAAHAAgAAAATAAUAAAAHAAkAAAATAAYAAAAHAAkAAAATAAcAAAAHAAkAAAATAAgAAAAHAAkAAAATAAkAAAAHAAkAAAAbAAgAAAAHAAgAAAAbAAkAAAAHAAkAAAAOAAQAAAAHAAgAAAAOAAUAAAAHAAkAAAAOAAYAAAAHAAkAAAAOAAcAAAAHAAkAAAAOAAgAAAAHAAkAAAAOAAkAAAAHAAkAAAAAAAUAAAAIAAYAAAABAAUAAAAIAAYAAAACAAUAAAAIAAYAAAADAAUAAAAIAAYAAAAEAAUAAAAIAAYAAAAFAAUAAAAIAAYAAAAGAAUAAAAIAAYAAAAHAAUAAAAIAAYAAAAIAAUAAAAJAAYAAAAAAP//AAAOAAYAAAABAP//AAAOAAYAAAACAP//AAAOAAYAAAADAP//AAAOAAYAAAAEAP//AAAOAAYAAAAFAP//AAAOAAYAAAAGAP//AAAOAAYAAAAHAP//AAAOAAYAAAAIAP//AAAOAAYAAAAJAP//AAAOAAYAAAAKAP//AAAOAAYAAAALAP//AAAOAAYAAAAMAP//AAAOAAYAAAANAP//AAAOAAYAAAAOAP//AAAOAAYAAAAPAP//AAAOAAYAAAAQAP//AAAOAAYAAAARAP//AAAOAAYAAAASAP//AAAOAAYAAAATAP//AAAOAAYAAAAUAP//AAAOAAYAAAAVAP//AAAOAAYAAAAWAP//AAAOAAYAAAAXAP//AAAOAAYAAAAYAP//AAAOAAYAAAAZAP//AAAOAAYAAAAaAP//AAAOAAYAAAAbAP//AAAOAAYAAAAcAP//AAAOAAYAAAAdAP//AAAOAAYAAAAeAP//AAAOAAYAAAAfAP//AAAOAAYAAAAgAP//AAAOAAYAAAAhAP//AAAOAAYAAAAiAP//AAAOAAYAAAAiAAAAAAAOAAYAAAAiAAEAAAAOAAYAAAAiAAIAAAAOAAYAAAAiAAMAAAAOAAYAAAAiAAQAAAAOAAYAAAAiAAUAAAAOAAYAAAAiAAYAAAAOAAYAAAAiAAcAAAAOAAYAAAAiAAgAAAAOAAYAAAAAAAYAAAAOAAYAAAAAAAcAAAAOAAYAAAAAAAgAAAAOAAYAAAAAAAkAAAAOAAYAAAA=")
+tile_set = ExtResource("3_e8843")
+
+[node name="Player" parent="." unique_id=679804264 instance=ExtResource("4_6jxfj")]
+position = Vector2(1074, 269)
+
+[node name="Shado2" type="Sprite2D" parent="." unique_id=1692133632]
+position = Vector2(151.00002, 150.49998)
+scale = Vector2(0.21354166, 0.31840312)
+texture = ExtResource("5_oe83h")
+
+[node name="Shado4" type="Sprite2D" parent="." unique_id=1573862309]
+position = Vector2(547.8297, 88.495384)
+rotation = 1.5707964
+scale = Vector2(0.13280648, 1.091197)
+texture = ExtResource("5_oe83h")
+
+[node name="Shado5" type="Sprite2D" parent="." unique_id=636201650]
+position = Vector2(560.00006, 241.7739)
+rotation = -1.5707964
+scale = Vector2(0.09013214, 1.091197)
+texture = ExtResource("5_oe83h")
+
+[node name="Shado3" type="Sprite2D" parent="." unique_id=1873307384]
+position = Vector2(1004.98236, 150.50005)
+rotation = 3.1415927
+scale = Vector2(0.14676362, 0.31840312)
+texture = ExtResource("5_oe83h")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=751418547]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1912465184]
+position = Vector2(504, 324)
+shape = SubResource("RectangleShape2D_6jxfj")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=599152402]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1739008907]
+position = Vector2(-4, 82.5)
+shape = SubResource("RectangleShape2D_e8843")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

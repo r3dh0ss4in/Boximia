@@ -11,6 +11,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_04v7c"]
 size = Vector2(94, 29.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_03uaw"]
+size = Vector2(833, 25.5)
+
 [node name="03_03" type="Node2D" unique_id=1482658180]
 script = ExtResource("1_03uaw")
 
@@ -60,7 +63,7 @@ texture = ExtResource("6_03uaw")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=1359571130]
 z_index = -3
-tile_map_data = PackedByteArray("AAAOAAMAAQAAAAIAAAAOAAQAAQAAAAEAAAAOAAUAAQAAAAIAAAAOAAYAAQAAAAEAAAAOAAcAAQAAAAIAAAAPAAMAAQAEAAIAAAAPAAQAAQAEAAEAAAAPAAUAAQAEAAIAAAAPAAYAAQAEAAEAAAAPAAcAAQAEAAIAAAAEAAgAAQAAAAMAAAAEAAkAAQAAAAQAAAAFAAgAAQAEAAEAAAAFAAkAAQAEAAIAAAAOAAkAAQAAAAQAAAAPAAkAAQAAAAQAAAAJAAcAAQAAAAEAAAAJAAgAAQAAAAEAAAAJAAkAAQAAAAIAAAAKAAcAAQAEAAEAAAAKAAgAAQAEAAEAAAAKAAkAAQAEAAIAAAA=")
+tile_map_data = PackedByteArray("AAAOAAMAAQAAAAIAAAAOAAQAAQAAAAEAAAAOAAUAAQAAAAIAAAAOAAYAAQAAAAEAAAAOAAcAAQAAAAIAAAAPAAMAAQAEAAIAAAAPAAQAAQAEAAEAAAAPAAUAAQAEAAIAAAAPAAYAAQAEAAEAAAAPAAcAAQAEAAIAAAAEAAgAAQAAAAMAAAAEAAkAAQAAAAQAAAAFAAgAAQAEAAEAAAAFAAkAAQAEAAIAAAAOAAkAAQAAAAIAAAAPAAkAAQAEAAIAAAAJAAcAAQAAAAEAAAAJAAgAAQAAAAEAAAAJAAkAAQAAAAIAAAAKAAcAAQAEAAEAAAAKAAgAAQAEAAEAAAAKAAkAAQAEAAIAAAAPAAgAAQAEAAIAAAAOAAgAAQAAAAIAAAA=")
 tile_set = ExtResource("4_8ndph")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=394472606]
@@ -71,4 +74,13 @@ collision_mask = 16
 position = Vector2(1185, 304.25)
 shape = SubResource("RectangleShape2D_04v7c")
 
+[node name="Area2D2" type="Area2D" parent="." unique_id=1339359027]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=899090806]
+position = Vector2(590.5, 309.25)
+shape = SubResource("RectangleShape2D_03uaw")
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

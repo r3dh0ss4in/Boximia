@@ -1,12 +1,20 @@
 [gd_scene format=4 uid="uid://p4qqsp01p3sp"]
 
 [ext_resource type="Script" uid="uid://f4npxarc848j" path="res://General/Scripts/Level_Bounds.gd" id="1_h1cv3"]
+[ext_resource type="Script" uid="uid://dluje70oi0bqa" path="res://Levels/02_Nazanaza/03_04.gd" id="1_yiemi"]
 [ext_resource type="TileSet" uid="uid://dwy86addhdxph" path="res://Levels/Hason Nogor/Tileset/Hason_Nogor.tres" id="2_fh0j1"]
 [ext_resource type="PackedScene" uid="uid://do5bbbadoprra" path="res://Player/player.tscn" id="3_oiu7n"]
 [ext_resource type="Texture2D" uid="uid://da2h3cn1k10gi" path="res://Levels/Nazanaza/03_04.png" id="4_fh0j1"]
 [ext_resource type="Texture2D" uid="uid://bscwskvydiv3k" path="res://Levels/shado_2.png" id="5_oiu7n"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oiu7n"]
+size = Vector2(676, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ujgbf"]
+size = Vector2(39, 122)
+
 [node name="03_04" type="Node2D" unique_id=1870996704]
+script = ExtResource("1_yiemi")
 
 [node name="Level_Bounds" type="Node2D" parent="." unique_id=1110283384]
 z_index = 256
@@ -51,3 +59,22 @@ position = Vector2(617.00006, 219.74191)
 rotation = -1.5707964
 scale = Vector2(0.1197341, 1.2182705)
 texture = ExtResource("5_oiu7n")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=844114715]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=529811528]
+position = Vector2(432, 305)
+shape = SubResource("RectangleShape2D_oiu7n")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=671523829]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1080052820]
+position = Vector2(1232.5, 88)
+shape = SubResource("RectangleShape2D_ujgbf")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

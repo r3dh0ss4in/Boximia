@@ -10,6 +10,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a74bw"]
 size = Vector2(29.5, 106.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0sn6h"]
+size = Vector2(537.5, 20.5)
+
 [node name="03_02" type="Node2D" unique_id=880385816]
 script = ExtResource("1_88llr")
 
@@ -65,4 +68,13 @@ collision_mask = 16
 position = Vector2(1242.25, 111.25)
 shape = SubResource("RectangleShape2D_a74bw")
 
+[node name="Area2D2" type="Area2D" parent="." unique_id=148753931]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1222849115]
+position = Vector2(514.25, 311.25)
+shape = SubResource("RectangleShape2D_0sn6h")
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

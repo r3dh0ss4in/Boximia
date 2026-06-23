@@ -10,6 +10,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yscoc"]
 size = Vector2(211, 41)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_erb2a"]
+size = Vector2(211, 18)
+
 [node name="03_01" type="Node2D" unique_id=1228000244]
 script = ExtResource("1_erb2a")
 
@@ -81,4 +84,13 @@ collision_mask = 16
 position = Vector2(95.5, -19.5)
 shape = SubResource("RectangleShape2D_yscoc")
 
+[node name="Area2D2" type="Area2D" parent="." unique_id=777175369]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=706856196]
+position = Vector2(933.5, 304)
+shape = SubResource("RectangleShape2D_erb2a")
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
