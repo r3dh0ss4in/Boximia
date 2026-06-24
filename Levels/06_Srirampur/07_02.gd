@@ -12,4 +12,4 @@ func _on_area_2d_2_body_entered(body: Node2D) -> void:
 	if body is Player:
 		TransitionScreen.transition()
 		await TransitionScreen.on_transition_finished
-		get_tree().change_scene_to_file("res://Levels/06_Srirampur/07_01.tscn")
+		get_tree().change_scene_to_file("res://Levels/07_Epitaph/08.tscn")

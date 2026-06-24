@@ -1,0 +1,87 @@
+[gd_scene format=4 uid="uid://d1xukrimjf6d0"]
+
+[ext_resource type="Script" uid="uid://f4npxarc848j" path="res://General/Scripts/Level_Bounds.gd" id="1_73gsf"]
+[ext_resource type="Script" uid="uid://cwinwoigaywks" path="res://Levels/06_Srirampur/07_01.gd" id="1_ya42f"]
+[ext_resource type="Texture2D" uid="uid://b5odi33bo5qod" path="res://Levels/Srirampur/07_01.png" id="2_o8u7a"]
+[ext_resource type="TileSet" uid="uid://dwy86addhdxph" path="res://Levels/Hason Nogor/Tileset/Hason_Nogor.tres" id="3_ya42f"]
+[ext_resource type="TileSet" uid="uid://1kr8vdmarlj2" path="res://Levels/Hason Nogor/Tileset/Hason_Nogor_2.tres" id="4_eqomg"]
+[ext_resource type="PackedScene" uid="uid://do5bbbadoprra" path="res://Player/player.tscn" id="5_7pw2s"]
+[ext_resource type="Texture2D" uid="uid://bscwskvydiv3k" path="res://Levels/shado_2.png" id="7_eqomg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eqomg"]
+size = Vector2(1144, 9.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7pw2s"]
+size = Vector2(27, 340)
+
+[node name="07_01" type="Node2D" unique_id=328042146]
+script = ExtResource("1_ya42f")
+
+[node name="Level_Bounds" type="Node2D" parent="." unique_id=571599356]
+z_index = 256
+script = ExtResource("1_73gsf")
+width = 1104
+hight = 302
+metadata/_custom_type_script = "uid://f4npxarc848j"
+
+[node name="0701" type="Sprite2D" parent="." unique_id=2110759990]
+z_index = -3
+position = Vector2(558, 156.625)
+scale = Vector2(1.5815217, 1.4228625)
+texture = ExtResource("2_o8u7a")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=414387315]
+z_index = -2
+tile_map_data = PackedByteArray("AAAAAP//AAABAAIAAAABAP//AAABAAIAAAACAP//AAABAAIAAAADAP//AAABAAIAAAAEAP//AAABAAIAAAAFAP//AAABAAIAAAAGAP//AAABAAIAAAAHAP//AAABAAIAAAAIAP//AAABAAIAAAAJAP//AAABAAIAAAAKAP//AAABAAIAAAALAP//AAABAAIAAAAMAP//AAABAAIAAAANAP//AAABAAIAAAAOAP//AAABAAIAAAAPAP//AAABAAIAAAAQAP//AAABAAIAAAARAP//AAABAAIAAAASAP//AAABAAIAAAATAP//AAABAAIAAAAUAP//AAABAAIAAAAVAP//AAABAAIAAAAWAP//AAABAAIAAAAXAP//AAABAAIAAAAYAP//AAABAAIAAAAZAP//AAABAAIAAAAaAP//AAABAAIAAAAbAP//AAABAAIAAAAcAP//AAABAAIAAAAdAP//AAABAAIAAAAeAP//AAABAAIAAAAfAP//AAABAAIAAAAgAP//AAABAAIAAAAhAP//AAABAAIAAAAiAP//AAABAAIAAAAjAP//AAABAAIAAAAiAAUAAAARAAYAAAAiAAYAAAABAAIAAAAiAAcAAAABAAIAAAAiAAgAAAABAAIAAAAiAAkAAAABAAIAAAD/////AAABAAIAAAD//wAAAAABAAIAAAD//wEAAAABAAIAAAD//wIAAAABAAIAAAD//wMAAAABAAIAAAD//wQAAAABAAIAAAD//wUAAAABAAIAAAD//wYAAAABAAIAAAD//wcAAAABAAIAAAD//wgAAAABAAIAAAD//wkAAAABAAIAAAADAAMAAAADAAgAAAAEAAMAAAAEAAgAAAAFAAMAAAADAAgAAAAGAAMAAAAEAAgAAAABAAMAAAAAAAgAAAACAAMAAAACAAgAAAABAAQAAAAAAAkAAAABAAUAAAAAAAkAAAABAAYAAAAAAAkAAAABAAcAAAAAAAkAAAABAAgAAAAAAAkAAAACAAQAAAABAAkAAAADAAQAAAABAAkAAAAEAAQAAAACAAkAAAAFAAQAAAADAAkAAAAGAAQAAAAFAAkAAAAGAAUAAAAFAAkAAAAGAAYAAAAFAAkAAAAGAAcAAAAFAAkAAAAGAAgAAAAFAAkAAAAGAAkAAAAFAAkAAAABAAkAAAAAAAkAAAACAAUAAAACAAIAAAADAAUAAAACAAIAAAAEAAUAAAACAAIAAAAFAAUAAAACAAIAAAAFAAYAAAACAAIAAAAFAAcAAAACAAIAAAAFAAgAAAACAAIAAAAFAAkAAAACAAIAAAAEAAkAAAACAAIAAAADAAkAAAACAAIAAAACAAkAAAACAAIAAAACAAgAAAACAAIAAAACAAcAAAACAAIAAAACAAYAAAACAAIAAAADAAYAAAACAAIAAAAEAAYAAAACAAIAAAAEAAcAAAACAAIAAAAEAAgAAAACAAIAAAADAAgAAAACAAIAAAADAAcAAAACAAIAAAAMAAkAAAAAAAYAAAANAAkAAAABAAYAAAAOAAkAAAACAAYAAAAPAAkAAAADAAYAAAAQAAkAAAAEAAYAAAARAAkAAAABAAYAAAASAAkAAAACAAYAAAATAAkAAAABAAYAAAAUAAkAAAACAAYAAAAVAAkAAAADAAYAAAAWAAkAAAABAAYAAAAXAAkAAAACAAYAAAAYAAkAAAADAAYAAAAaAAcAAAAQAAYAAAAdAAUAAAAQAAYAAAAhAAUAAAAQAAYAAAA=")
+tile_set = ExtResource("3_ya42f")
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=1493981316]
+modulate = Color(1, 1, 1, 0.78431374)
+z_index = -3
+tile_map_data = PackedByteArray("AAABAAQAAQAAAAkAAAABAAUAAQAAAAoAAAABAAYAAQAAAAkAAAABAAcAAQAAAAoAAAACAAQAAQABAAkAAAACAAUAAQABAAoAAAACAAYAAQABAAkAAAACAAcAAQABAAoAAAADAAQAAQACAAkAAAADAAUAAQACAAoAAAADAAYAAQACAAkAAAADAAcAAQACAAoAAAAEAAQAAQADAAkAAAAEAAUAAQADAAoAAAAEAAYAAQADAAkAAAAEAAcAAQADAAoAAAAFAAQAAQAEAAkAAAAFAAUAAQAEAAoAAAAFAAYAAQAEAAkAAAAFAAcAAQAEAAoAAAAGAAQAAQAFAAkAAAAGAAUAAQAFAAoAAAAGAAYAAQAFAAkAAAAGAAcAAQAFAAoAAAABAAgAAQAAAAsAAAABAAkAAQAAAAwAAAACAAgAAQABAAsAAAACAAkAAQABAAwAAAADAAgAAQACAAsAAAADAAkAAQACAAwAAAAEAAgAAQADAAsAAAAEAAkAAQADAAwAAAAFAAgAAQAEAAsAAAAFAAkAAQAEAAwAAAAGAAgAAQAFAAsAAAAGAAkAAQAFAAwAAAAaAAcAAQAHAAgAAAAaAAgAAQAHAAkAAAAaAAkAAQAHAAkAAAAdAAUAAQAHAAgAAAAdAAYAAQAHAAkAAAAdAAcAAQAHAAoAAAAdAAgAAQAHAAkAAAAdAAkAAQAHAAoAAAAhAAUAAQAHAAgAAAAhAAYAAQAHAAkAAAAhAAcAAQAHAAoAAAAhAAgAAQAHAAkAAAAhAAkAAQAHAAoAAAA=")
+tile_set = ExtResource("4_eqomg")
+
+[node name="Player" parent="." unique_id=679804264 instance=ExtResource("5_7pw2s")]
+position = Vector2(97, 24)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=184291429]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2033763751]
+position = Vector2(559, 334.25)
+shape = SubResource("RectangleShape2D_eqomg")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=1314325040]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=942654851]
+position = Vector2(1121.5, 160)
+shape = SubResource("RectangleShape2D_7pw2s")
+
+[node name="Shado2" type="Sprite2D" parent="." unique_id=57364320]
+position = Vector2(132.5, 153.00002)
+scale = Vector2(0.20507815, 0.32327166)
+texture = ExtResource("7_eqomg")
+
+[node name="Shado3" type="Sprite2D" parent="." unique_id=1794957920]
+position = Vector2(1002.9807, 153.00009)
+rotation = 3.1415927
+scale = Vector2(0.16208918, 0.32327166)
+texture = ExtResource("7_eqomg")
+
+[node name="Shado4" type="Sprite2D" parent="." unique_id=722365496]
+position = Vector2(552.8431, 34.627594)
+rotation = 1.5707964
+scale = Vector2(0.060383815, 1.112061)
+texture = ExtResource("7_eqomg")
+
+[node name="Shado5" type="Sprite2D" parent="." unique_id=845076957]
+position = Vector2(552.8431, 250.51653)
+rotation = -1.5707964
+scale = Vector2(0.08334621, 1.112061)
+texture = ExtResource("7_eqomg")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

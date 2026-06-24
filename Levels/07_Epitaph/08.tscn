@@ -1,0 +1,81 @@
+[gd_scene format=4 uid="uid://bx51p6cqcorst"]
+
+[ext_resource type="Script" uid="uid://dcx7fd166gmd6" path="res://Levels/07_Epitaph/08.gd" id="1_jeklb"]
+[ext_resource type="Script" uid="uid://f4npxarc848j" path="res://General/Scripts/Level_Bounds.gd" id="1_puota"]
+[ext_resource type="Texture2D" uid="uid://cb7ss462kt27t" path="res://Levels/Epitaph/08.png" id="2_fthi0"]
+[ext_resource type="TileSet" uid="uid://dwy86addhdxph" path="res://Levels/Hason Nogor/Tileset/Hason_Nogor.tres" id="3_ugjcs"]
+[ext_resource type="TileSet" uid="uid://1kr8vdmarlj2" path="res://Levels/Hason Nogor/Tileset/Hason_Nogor_2.tres" id="4_jeklb"]
+[ext_resource type="PackedScene" uid="uid://do5bbbadoprra" path="res://Player/player.tscn" id="5_7bqs2"]
+[ext_resource type="Texture2D" uid="uid://bscwskvydiv3k" path="res://Levels/shado_2.png" id="6_ugjcs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7bqs2"]
+size = Vector2(109.75, 19.25)
+
+[node name="08" type="Node2D" unique_id=1159608100]
+script = ExtResource("1_jeklb")
+
+[node name="Level_Bounds" type="Node2D" parent="." unique_id=1010239389]
+z_index = 256
+script = ExtResource("1_puota")
+width = 816
+hight = 590
+metadata/_custom_type_script = "uid://f4npxarc848j"
+
+[node name="08" type="Sprite2D" parent="." unique_id=741248691]
+z_index = -3
+position = Vector2(409, 298)
+scale = Vector2(0.590678, 0.5745778)
+texture = ExtResource("2_fthi0")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=582373868]
+z_index = -2
+tile_map_data = PackedByteArray("AAAAAAIAAAAIAAYAAAABAAIAAAAIAAYAAAACAAIAAAAIAAYAAAADAAIAAAAIAAYAAAAEAAIAAAAIAAYAAAAFAAIAAAAIAAYAAAAGAAIAAAAIAAYAAAAHAAIAAAAIAAYAAAAIAAIAAAAIAAYAAAAJAAIAAAAIAAYAAAAKAAIAAAAIAAYAAAALAAIAAAAIAAYAAAAMAAIAAAAIAAYAAAANAAIAAAAIAAYAAAAOAAIAAAAIAAYAAAAPAAIAAAAIAAYAAAAQAAIAAAAIAAYAAAARAAIAAAAIAAYAAAASAAIAAAAIAAYAAAATAAIAAAAIAAYAAAAUAAIAAAAIAAYAAAAVAAIAAAAJAAYAAAAWAAIAAAAHAAkAAAAWAAMAAAAHAAkAAAAWAAQAAAAHAAkAAAAWAAUAAAAHAAkAAAAWAAYAAAAHAAkAAAAWAAcAAAAHAAkAAAAWAAgAAAAHAAkAAAAWAAkAAAAHAAkAAAAWAAoAAAAHAAkAAAAWAAsAAAAHAAkAAAAWAAwAAAAHAAkAAAAWAA0AAAAHAAkAAAAWAA4AAAAHAAkAAAAWAA8AAAAHAAkAAAAVABIAAAAIAAYAAAAWABIAAAAJAAYAAAAUABIAAAAIAAYAAAATABIAAAAIAAYAAAASABIAAAAIAAYAAAARABIAAAAIAAYAAAAQABIAAAAIAAYAAAAPABIAAAAIAAYAAAAOABIAAAAIAAYAAAANABIAAAAIAAYAAAAMABIAAAAIAAYAAAALABIAAAAIAAYAAAAKABIAAAAIAAYAAAAJABIAAAAIAAYAAAAIABIAAAAIAAYAAAAHABIAAAAIAAYAAAAGABIAAAAIAAYAAAAFABIAAAAIAAYAAAAEABIAAAAIAAYAAAADABIAAAAIAAYAAAACABIAAAAIAAYAAAABABIAAAAIAAYAAAAAABIAAAAIAAYAAAD//xIAAAALAAkAAAD//xEAAAALAAkAAAD//xAAAAALAAkAAAD//w4AAAALAAkAAAD//w8AAAALAAkAAAD//w0AAAALAAkAAAD//wwAAAALAAkAAAD//wsAAAALAAkAAAD//woAAAALAAkAAAD//wkAAAALAAkAAAD//wgAAAALAAkAAAD//wcAAAALAAkAAAD//wYAAAALAAkAAAD//wUAAAALAAkAAAD//wQAAAALAAkAAAD//wMAAAALAAkAAAD//wIAAAALAAkAAAD//wEAAAALAAkAAAD//wAAAAALAAkAAAD/////AAALAAkAAAAAAP//AAALAAkAAAABAP//AAALAAkAAAACAP//AAALAAkAAAADAP//AAALAAkAAAAEAP//AAALAAkAAAAFAP//AAALAAkAAAAGAP//AAALAAkAAAAHAP//AAALAAkAAAAIAP//AAALAAkAAAAJAP//AAALAAkAAAAKAP//AAALAAkAAAALAP//AAALAAkAAAAMAP//AAALAAkAAAANAP//AAALAAkAAAAOAP//AAALAAkAAAAPAP//AAALAAkAAAAQAP//AAALAAkAAAARAP//AAALAAkAAAASAP//AAALAAkAAAATAP//AAALAAkAAAAUAP//AAALAAkAAAAVAP//AAALAAkAAAAWAP//AAALAAkAAAAXAP//AAALAAkAAAAYAP//AAALAAkAAAAZAP//AAALAAkAAAAZAAAAAAALAAkAAAAZAAEAAAALAAkAAAAZAAIAAAALAAkAAAAZAAMAAAALAAkAAAAZAAQAAAALAAkAAAAZAAUAAAALAAkAAAAZAAYAAAALAAkAAAAZAAcAAAALAAkAAAAZAAgAAAALAAkAAAAZAAkAAAALAAkAAAAZAAoAAAALAAkAAAAZAAsAAAALAAkAAAAZAAwAAAALAAkAAAAZAA0AAAALAAkAAAAZAA4AAAALAAkAAAAZAA8AAAALAAkAAAAZABAAAAALAAkAAAAZABEAAAALAAkAAAAZABIAAAALAAkAAAA=")
+tile_set = ExtResource("3_ugjcs")
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=1171627691]
+modulate = Color(1, 1, 1, 0.7882353)
+z_index = -3
+tile_map_data = PackedByteArray("AAAXAAIAAQAIAAgAAAAXAAMAAQAIAAkAAAAXAAQAAQAIAAoAAAAYAAIAAQAJAAgAAAAYAAMAAQAJAAkAAAAYAAQAAQAJAAoAAAAXAAUAAQAIAAkAAAAXAAYAAQAIAAoAAAAYAAUAAQAJAAkAAAAYAAYAAQAJAAoAAAAXAAcAAQAIAAkAAAAXAAgAAQAIAAoAAAAYAAcAAQAJAAkAAAAYAAgAAQAJAAoAAAAXAAkAAQAIAAkAAAAXAAoAAQAIAAoAAAAYAAkAAQAJAAkAAAAYAAoAAQAJAAoAAAAXAAsAAQAIAAkAAAAXAAwAAQAIAAoAAAAYAAsAAQAJAAkAAAAYAAwAAQAJAAoAAAAXAA4AAQAIAAoAAAAXAA8AAQAIAAoAAAAYAA4AAQAJAAoAAAAYAA8AAQAJAAoAAAAXAA0AAQAIAAkAAAAYAA0AAQAJAAkAAAAXABAAAQAIAAkAAAAXABEAAQAIAAkAAAAYABAAAQAJAAkAAAAYABEAAQAJAAkAAAAXABIAAQAIAAoAAAAYABIAAQAJAAoAAAA=")
+tile_set = ExtResource("4_jeklb")
+
+[node name="Player" parent="." unique_id=679804264 instance=ExtResource("5_7bqs2")]
+position = Vector2(29, 44)
+
+[node name="Shado2" type="Sprite2D" parent="." unique_id=542788408]
+position = Vector2(343.01318, 261.7835)
+rotation = 1.5707964
+scale = Vector2(0.23016073, 0.6960773)
+texture = ExtResource("6_ugjcs")
+
+[node name="Shado4" type="Sprite2D" parent="." unique_id=1630675795]
+position = Vector2(712.0321, 295.9738)
+rotation = 3.1415927
+scale = Vector2(0.145729, 0.62949455)
+texture = ExtResource("6_ugjcs")
+
+[node name="Shado5" type="Sprite2D" parent="." unique_id=71467966]
+position = Vector2(406.4857, 540.51697)
+rotation = -1.5707964
+scale = Vector2(0.08125381, 0.817763)
+texture = ExtResource("6_ugjcs")
+
+[node name="Shado6" type="Sprite2D" parent="." unique_id=1034138972]
+position = Vector2(55.00003, 292.46066)
+scale = Vector2(0.08125381, 0.6065446)
+texture = ExtResource("6_ugjcs")
+
+[node name="Shado3" type="Sprite2D" parent="." unique_id=679712042]
+position = Vector2(345.19998, 71.86621)
+rotation = -1.5707964
+scale = Vector2(0.059762135, 0.70036155)
+texture = ExtResource("6_ugjcs")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1874787846]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1839328185]
+position = Vector2(779.875, 616.375)
+shape = SubResource("RectangleShape2D_7bqs2")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
