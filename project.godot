@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 TransitionScreen="*uid://blfh7l2fedt8k"
+PlayerHealth="*uid://5ptklvofd6dk"
+Items="*uid://bt0wexffn8yid"
 
 [display]
 

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://5ptklvofd6dk"]
+
+[ext_resource type="Script" uid="uid://cuap3jyd1bcek" path="res://00_Global/Player_Health/player_health.gd" id="1_kye2f"]
+[ext_resource type="Texture2D" uid="uid://ua35tn2y1e3x" path="res://00_Global/Player_Health/heart_frame.png" id="1_xusk1"]
+[ext_resource type="FontFile" uid="uid://cdgqai0rhc2j1" path="res://General/Fonts/LuckiestGuy-Regular.ttf" id="3_ofho0"]
+
+[node name="PlayerHealth" type="CanvasLayer" unique_id=528265870]
+process_mode = 3
+layer = 101
+script = ExtResource("1_kye2f")
+
+[node name="Control" type="Control" parent="." unique_id=109005144]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HeartFrame" type="Sprite2D" parent="Control" unique_id=719259792]
+position = Vector2(10, 9.000001)
+scale = Vector2(0.0065937517, 0.0057486617)
+texture = ExtResource("1_xusk1")
+
+[node name="Label" type="Label" parent="Control" unique_id=1481545099]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 3.0
+offset_right = 97.0
+offset_bottom = 20.0
+theme_override_fonts/font = ExtResource("3_ofho0")
+text = "50"

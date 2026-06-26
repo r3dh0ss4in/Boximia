@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d05ucxwde8ngo" path="res://Player/Sprite/Shoot.png" id="1_kili7"]
 [ext_resource type="Texture2D" uid="uid://bwd36fb6cel6d" path="res://Player/fin_arrow.png" id="2_r4n6s"]
+[ext_resource type="Texture2D" uid="uid://vrcf37g77l4q" path="res://Player/arrow.png" id="2_yuvem"]
 
 [node name="Touch_Control" type="Node2D" unique_id=744810894]
 
@@ -16,38 +17,38 @@ grow_vertical = 2
 
 [node name="Shoot" type="TouchScreenButton" parent="CanvasLayer/TextureRect" unique_id=1313217610]
 modulate = Color(1, 1, 1, 0.6392157)
-position = Vector2(332, 203)
-scale = Vector2(0.06653226, 0.06854839)
+position = Vector2(339, 172)
+scale = Vector2(0.10887102, 0.11491938)
 texture_normal = ExtResource("1_kili7")
 action = "shoot"
 
 [node name="Left" type="TouchScreenButton" parent="CanvasLayer/TextureRect" unique_id=1933204984]
 modulate = Color(1, 1, 1, 0.4)
-position = Vector2(37.999992, 237)
+position = Vector2(43, 236.99998)
 rotation = -1.5707964
-scale = Vector2(0.16, 0.16)
-texture_normal = ExtResource("2_r4n6s")
+scale = Vector2(0.28344837, 0.30567005)
+texture_normal = ExtResource("2_yuvem")
 action = "move_left"
 
 [node name="Right" type="TouchScreenButton" parent="CanvasLayer/TextureRect" unique_id=2137220938]
 modulate = Color(1, 1, 1, 0.4)
-position = Vector2(162, 207)
+position = Vector2(197, 184.00002)
 rotation = 1.5707964
-scale = Vector2(0.16, 0.16)
+scale = Vector2(0.2814168, 0.30639255)
 texture_normal = ExtResource("2_r4n6s")
 action = "move_right"
 
 [node name="Jump" type="TouchScreenButton" parent="CanvasLayer/TextureRect" unique_id=926846697]
 modulate = Color(1, 1, 1, 0.4)
-position = Vector2(396, 151)
-scale = Vector2(0.16, 0.16)
+position = Vector2(403, 127)
+scale = Vector2(0.2903226, 0.2956989)
 texture_normal = ExtResource("2_r4n6s")
 action = "jump"
 
 [node name="Down" type="TouchScreenButton" parent="CanvasLayer/TextureRect" unique_id=1381275563]
 modulate = Color(1, 1, 1, 0.4)
-position = Vector2(67.00001, 184)
+position = Vector2(100.330986, 164.00002)
 rotation = 3.1415927
-scale = Vector2(0.16, 0.16)
+scale = Vector2(0.291567, 0.29774106)
 texture_normal = ExtResource("2_r4n6s")
 action = "down"
