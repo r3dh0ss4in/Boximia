@@ -7,6 +7,7 @@
 [ext_resource type="TileSet" uid="uid://1kr8vdmarlj2" path="res://Levels/Hason Nogor/Tileset/Hason_Nogor_2.tres" id="4_or7du"]
 [ext_resource type="PackedScene" uid="uid://do5bbbadoprra" path="res://Player/player.tscn" id="5_iocgd"]
 [ext_resource type="Texture2D" uid="uid://bscwskvydiv3k" path="res://Levels/shado_2.png" id="6_l8av5"]
+[ext_resource type="PackedScene" uid="uid://c6nu7ugtjl2kh" path="res://Levels/05_Arshinagar/moving_platform_1.tscn" id="8_or7du"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_or7du"]
 size = Vector2(606, 13)
@@ -42,7 +43,7 @@ tile_map_data = PackedByteArray("AAAEAAYAAQAAAAoAAAAEAAcAAQAAAAsAAAAEAAgAAQAAAAs
 tile_set = ExtResource("4_or7du")
 
 [node name="Player" parent="." unique_id=679804264 instance=ExtResource("5_iocgd")]
-position = Vector2(399, 66)
+position = Vector2(1074, 206)
 
 [node name="Shado2" type="Sprite2D" parent="." unique_id=1462790882]
 position = Vector2(156, 147)
@@ -50,7 +51,6 @@ scale = Vector2(0.20833334, 0.31548202)
 texture = ExtResource("6_l8av5")
 
 [node name="Shado3" type="Sprite2D" parent="." unique_id=1451436081]
-visible = false
 position = Vector2(907.1419, 147.00006)
 rotation = 3.1415927
 scale = Vector2(0.26600137, 0.31548202)
@@ -63,7 +63,6 @@ scale = Vector2(0.06993016, 1.0951757)
 texture = ExtResource("6_l8av5")
 
 [node name="Shado5" type="Sprite2D" parent="." unique_id=4323547]
-visible = false
 position = Vector2(549.2866, 237.34964)
 rotation = -1.5707964
 scale = Vector2(0.10222423, 1.0951757)
@@ -84,6 +83,9 @@ collision_mask = 16
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=952871691]
 position = Vector2(60, 314.5)
 shape = SubResource("RectangleShape2D_po3ul")
+
+[node name="moving_platform_1" parent="." unique_id=35144224 instance=ExtResource("8_or7du")]
+position = Vector2(460, 231)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

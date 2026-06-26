@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://blgc5ix0ytf6g"]
+
+[ext_resource type="Texture2D" uid="uid://dldt7eqjeetyq" path="res://General/Images/stone.png" id="1_gg3w7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tcus0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_gg3w7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3bs0b"]
+radius = 4.0
+height = 62.0
+
+[sub_resource type="Animation" id="Animation_tcus0"]
+length = 8.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -185)]
+}
+
+[sub_resource type="Animation" id="Animation_lofb1"]
+resource_name = "move"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 2.0705302),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -80)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tcus0"]
+_data = {
+&"RESET": SubResource("Animation_tcus0"),
+&"move": SubResource("Animation_lofb1")
+}
+
+[node name="moving_platform_2" type="Node2D" unique_id=35144224]
+z_index = -2
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="." unique_id=111584690]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatableBody2D" unique_id=1226704696]
+position = Vector2(-1, -6)
+scale = Vector2(0.07436224, 0.05720663)
+sprite_frames = SubResource("SpriteFrames_tcus0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D" unique_id=2098580877]
+position = Vector2(0, 5)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_3bs0b")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody2D" unique_id=2143994650]
+libraries/ = SubResource("AnimationLibrary_tcus0")
+autoplay = &"RESET"
