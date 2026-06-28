@@ -17,8 +17,8 @@ grow_vertical = 2
 
 [node name="Shoot" type="TouchScreenButton" parent="CanvasLayer/TextureRect" unique_id=1313217610]
 modulate = Color(1, 1, 1, 0.6392157)
-position = Vector2(339, 172)
-scale = Vector2(0.10887102, 0.11491938)
+position = Vector2(335, 126.000015)
+scale = Vector2(0.10685481, 0.09879035)
 texture_normal = ExtResource("1_kili7")
 action = "shoot"
 
@@ -26,29 +26,29 @@ action = "shoot"
 modulate = Color(1, 1, 1, 0.4)
 position = Vector2(43, 236.99998)
 rotation = -1.5707964
-scale = Vector2(0.28344837, 0.30567005)
+scale = Vector2(0.24703065, 0.25104362)
 texture_normal = ExtResource("2_yuvem")
 action = "move_left"
 
 [node name="Right" type="TouchScreenButton" parent="CanvasLayer/TextureRect" unique_id=2137220938]
 modulate = Color(1, 1, 1, 0.4)
-position = Vector2(197, 184.00002)
+position = Vector2(147.5158, 192)
 rotation = 1.5707964
-scale = Vector2(0.2814168, 0.30639255)
+scale = Vector2(0.23589441, 0.24873134)
 texture_normal = ExtResource("2_r4n6s")
 action = "move_right"
 
 [node name="Jump" type="TouchScreenButton" parent="CanvasLayer/TextureRect" unique_id=926846697]
 modulate = Color(1, 1, 1, 0.4)
-position = Vector2(403, 127)
-scale = Vector2(0.2903226, 0.2956989)
+position = Vector2(404, 179)
+scale = Vector2(0.24731188, 0.24731182)
 texture_normal = ExtResource("2_r4n6s")
 action = "jump"
 
 [node name="Down" type="TouchScreenButton" parent="CanvasLayer/TextureRect" unique_id=1381275563]
 modulate = Color(1, 1, 1, 0.4)
-position = Vector2(100.330986, 164.00002)
+position = Vector2(95.00701, 164.00002)
 rotation = 3.1415927
-scale = Vector2(0.291567, 0.29774106)
+scale = Vector2(0.26294348, 0.2476496)
 texture_normal = ExtResource("2_r4n6s")
 action = "down"

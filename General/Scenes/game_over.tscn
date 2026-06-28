@@ -1,0 +1,77 @@
+[gd_scene format=4 uid="uid://bf3dl21t1tvfd"]
+
+[ext_resource type="Script" uid="uid://cawvwvjlor0j8" path="res://General/Scripts/game_over.gd" id="1_nehyy"]
+[ext_resource type="Texture2D" uid="uid://bq4dn6kusvgmt" path="res://Levels/Hansi/05_01.png" id="1_wwdcb"]
+[ext_resource type="TileSet" uid="uid://1kr8vdmarlj2" path="res://Levels/Hason Nogor/Tileset/Hason_Nogor_2.tres" id="2_nehyy"]
+[ext_resource type="Texture2D" uid="uid://bscwskvydiv3k" path="res://Levels/shado_2.png" id="3_ybxum"]
+[ext_resource type="FontFile" uid="uid://c8rqcausq07rh" path="res://General/Fonts/alagard.ttf" id="4_q3eav"]
+[ext_resource type="FontFile" uid="uid://c27vw7oc3x4jd" path="res://General/Fonts/Gagalin-Regular.otf" id="5_oxntj"]
+[ext_resource type="FontFile" uid="uid://cdgqai0rhc2j1" path="res://General/Fonts/LuckiestGuy-Regular.ttf" id="6_40bh8"]
+
+[node name="GameOver" type="CanvasLayer" unique_id=1279331086]
+script = ExtResource("1_nehyy")
+
+[node name="Control" type="Control" parent="." unique_id=824306892]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="0501" type="Sprite2D" parent="Control" unique_id=1018378314]
+position = Vector2(134.25, 132)
+scale = Vector2(1.0460614, 1.152)
+texture = ExtResource("1_wwdcb")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Control" unique_id=573752870]
+modulate = Color(1, 1, 1, 0.69411767)
+tile_map_data = PackedByteArray("AAAGAAUAAQAAAAgAAAAGAAYAAQAAAAkAAAAGAAcAAQAIAAkAAAAGAAgAAQACAAkAAAAHAAUAAQABAAgAAAAHAAYAAQABAAkAAAAHAAcAAQABAAoAAAAHAAgAAQABAAsAAAAIAAUAAQACAAgAAAAIAAYAAQACAAkAAAAIAAcAAQACAAoAAAAIAAgAAQACAAsAAAAJAAUAAQADAAgAAAAJAAYAAQADAAkAAAAJAAcAAQADAAoAAAAJAAgAAQADAAsAAAAKAAUAAQACAAgAAAAKAAYAAQACAAkAAAAKAAcAAQACAAoAAAAKAAgAAQACAAsAAAALAAUAAQADAAgAAAALAAYAAQADAAkAAAALAAcAAQADAAoAAAALAAgAAQADAAsAAAAMAAUAAQAEAAgAAAAMAAYAAQAEAAkAAAAMAAcAAQAEAAoAAAAMAAgAAQAEAAsAAAANAAUAAQAFAAgAAAANAAYAAQAFAAkAAAANAAcAAQAFAAoAAAANAAgAAQAFAAsAAAAAAAcAAQACAAgAAAAAAAgAAQACAAkAAAABAAcAAQADAAgAAAABAAgAAQADAAkAAAACAAcAAQACAAgAAAACAAgAAQACAAkAAAADAAcAAQADAAgAAAADAAgAAQADAAkAAAAEAAcAAQACAAgAAAAEAAgAAQACAAkAAAAFAAcAAQACAAgAAAAFAAgAAQACAAkAAAA=")
+tile_set = ExtResource("2_nehyy")
+
+[node name="Shado2" type="Sprite2D" parent="Control" unique_id=666828804]
+position = Vector2(248.80386, 200.36371)
+rotation = -1.5707964
+scale = Vector2(0.119643115, 0.50531375)
+texture = ExtResource("3_ybxum")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=1863182620]
+layout_mode = 0
+offset_left = 234.0
+offset_top = 110.0
+offset_right = 412.0
+offset_bottom = 157.0
+
+[node name="Retry" type="Button" parent="Control/HBoxContainer" unique_id=1285241516]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_q3eav")
+theme_override_font_sizes/font_size = 32
+text = "Retry"
+
+[node name="Home" type="Button" parent="Control/HBoxContainer" unique_id=382865012]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_q3eav")
+theme_override_font_sizes/font_size = 32
+text = "Home"
+
+[node name="Boximia" type="Label" parent="." unique_id=1767604221]
+offset_left = 16.0
+offset_top = 12.0
+offset_right = 170.0
+offset_bottom = 78.0
+theme_override_fonts/font = ExtResource("5_oxntj")
+theme_override_font_sizes/font_size = 47
+text = "BOXIMIA"
+
+[node name="Game Over" type="Label" parent="." unique_id=1051347809]
+offset_left = 240.0
+offset_top = 82.0
+offset_right = 405.0
+offset_bottom = 114.0
+theme_override_colors/font_color = Color(0.92156863, 0, 0.11372549, 1)
+theme_override_fonts/font = ExtResource("6_40bh8")
+theme_override_font_sizes/font_size = 31
+text = "Game Over"
+
+[connection signal="pressed" from="Control/HBoxContainer/Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/Home" to="." method="_on_home_pressed"]

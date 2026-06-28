@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dyub862n870fr"]
+
+[ext_resource type="Texture2D" uid="uid://8qeh1sng6nfd" path="res://General/Images/un_shape.png" id="1_o15wo"]
+
+[node name="Point_green" type="Node2D" unique_id=463335962]
+
+[node name="Red" type="ColorRect" parent="." unique_id=327858219]
+z_index = -2
+offset_left = -8.999664
+offset_top = -20.00003
+offset_right = 10.000336
+offset_bottom = 12.9999695
+color = Color(0.1764706, 1, 0, 1)
+
+[node name="UnShape" type="Sprite2D" parent="." unique_id=63577174]
+z_index = -2
+position = Vector2(-0.49990845, 3.5)
+scale = Vector2(0.051758017, 0.04622395)
+texture = ExtResource("1_o15wo")

@@ -4,11 +4,17 @@
 [ext_resource type="TileSet" uid="uid://dwy86addhdxph" path="res://Levels/Hason Nogor/Tileset/Hason_Nogor.tres" id="1_jkad5"]
 [ext_resource type="Script" uid="uid://cvw4xdq8re5fh" path="res://Levels/00_Hason_Nogor/01.gd" id="1_v4hta"]
 [ext_resource type="PackedScene" uid="uid://do5bbbadoprra" path="res://Player/player.tscn" id="2_fqjxr"]
+[ext_resource type="PackedScene" uid="uid://d2axb472na2te" path="res://General/Scenes/point_red.tscn" id="3_cjfep"]
+[ext_resource type="FontFile" uid="uid://c27vw7oc3x4jd" path="res://General/Fonts/Gagalin-Regular.otf" id="3_fqeam"]
 [ext_resource type="Texture2D" uid="uid://bscwskvydiv3k" path="res://Levels/shado_2.png" id="3_nhegs"]
+[ext_resource type="PackedScene" uid="uid://dyub862n870fr" path="res://General/Scenes/point_green.tscn" id="4_fqeam"]
 [ext_resource type="Script" uid="uid://f4npxarc848j" path="res://General/Scripts/Level_Bounds.gd" id="8_nhegs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gwtmf"]
 size = Vector2(107, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cjfep"]
+size = Vector2(38, 65)
 
 [node name="01" type="Node2D" unique_id=1021706518]
 script = ExtResource("1_v4hta")
@@ -18,6 +24,24 @@ z_index = -3
 position = Vector2(640.5, 193.99998)
 scale = Vector2(0.7936198, 0.44726565)
 texture = ExtResource("1_gxvip")
+
+[node name="Store" type="Label" parent="." unique_id=2070632999]
+offset_left = 939.0
+offset_top = 204.0
+offset_right = 1028.0
+offset_bottom = 227.0
+theme_override_fonts/font = ExtResource("3_fqeam")
+theme_override_font_sizes/font_size = 11
+text = "Takla Store"
+
+[node name="Point_red" parent="." unique_id=102250165 instance=ExtResource("3_cjfep")]
+unique_name_in_owner = true
+position = Vector2(966, 249)
+
+[node name="Point_green" parent="." unique_id=463335962 instance=ExtResource("4_fqeam")]
+unique_name_in_owner = true
+visible = false
+position = Vector2(966, 249)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1165172510]
 z_index = -2
@@ -40,7 +64,7 @@ scale = Vector2(0.5364748, 0.5164861)
 texture = ExtResource("3_nhegs")
 
 [node name="Shado5" type="Sprite2D" parent="." unique_id=2062798216]
-position = Vector2(611.03265, 290.2588)
+position = Vector2(641, 290)
 rotation = -1.5707964
 scale = Vector2(0.2844404, 1.2494463)
 texture = ExtResource("3_nhegs")
@@ -79,4 +103,13 @@ visibility_layer = 0
 position = Vector2(764.5, 5.5)
 shape = SubResource("RectangleShape2D_gwtmf")
 
+[node name="Area2D2" type="Area2D" parent="." unique_id=708431679]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1847774330]
+position = Vector2(966, 250.5)
+shape = SubResource("RectangleShape2D_cjfep")
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

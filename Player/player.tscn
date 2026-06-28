@@ -80,6 +80,7 @@
 [ext_resource type="Texture2D" uid="uid://ceo5lj4wb5rrs" path="res://Player/Sprite/farena/Slashing/0_Necromancer_of_the_Shadow_Slashing_011.png" id="55_ac8n6"]
 [ext_resource type="Script" uid="uid://cv4jeaf55pmuj" path="res://Player/States/attack.gd" id="67_x0uyb"]
 [ext_resource type="PackedScene" uid="uid://ci48dtaw2atde" path="res://Player/touch_control.tscn" id="80_11wp0"]
+[ext_resource type="Texture2D" uid="uid://e88isxom1baa" path="res://General/Images/light_circle.png" id="81_11slg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d30e8"]
 animations = [{
@@ -401,6 +402,7 @@ unique_name_in_owner = true
 script = ExtResource("67_x0uyb")
 
 [node name="Label" type="Label" parent="." unique_id=1156996546]
+visible = false
 offset_left = -16.0
 offset_top = -49.0
 offset_right = 38.0
@@ -422,3 +424,8 @@ position_smoothing_enabled = true
 position_smoothing_speed = 3.0
 
 [node name="Touch_Control" parent="." unique_id=744810894 instance=ExtResource("80_11wp0")]
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=155468247]
+position = Vector2(-1.9999981, -5)
+scale = Vector2(0.24708624, 0.2309274)
+texture = ExtResource("81_11slg")
