@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://d05ucxwde8ngo" path="res://Player/Sprite/Shoot.png" id="1_kili7"]
 [ext_resource type="Texture2D" uid="uid://bwd36fb6cel6d" path="res://Player/fin_arrow.png" id="2_r4n6s"]
 [ext_resource type="Texture2D" uid="uid://vrcf37g77l4q" path="res://Player/arrow.png" id="2_yuvem"]
+[ext_resource type="Texture2D" uid="uid://b76p4xud7y2yf" path="res://General/Images/pause_button.png" id="4_kqg4c"]
 
 [node name="Touch_Control" type="Node2D" unique_id=744810894]
 
@@ -24,7 +25,7 @@ action = "shoot"
 
 [node name="Left" type="TouchScreenButton" parent="CanvasLayer/TextureRect" unique_id=1933204984]
 modulate = Color(1, 1, 1, 0.4)
-position = Vector2(43, 236.99998)
+position = Vector2(30, 236.99997)
 rotation = -1.5707964
 scale = Vector2(0.24703065, 0.25104362)
 texture_normal = ExtResource("2_yuvem")
@@ -32,7 +33,7 @@ action = "move_left"
 
 [node name="Right" type="TouchScreenButton" parent="CanvasLayer/TextureRect" unique_id=2137220938]
 modulate = Color(1, 1, 1, 0.4)
-position = Vector2(147.5158, 192)
+position = Vector2(151.51578, 192)
 rotation = 1.5707964
 scale = Vector2(0.23589441, 0.24873134)
 texture_normal = ExtResource("2_r4n6s")
@@ -40,7 +41,7 @@ action = "move_right"
 
 [node name="Jump" type="TouchScreenButton" parent="CanvasLayer/TextureRect" unique_id=926846697]
 modulate = Color(1, 1, 1, 0.4)
-position = Vector2(404, 179)
+position = Vector2(405, 187)
 scale = Vector2(0.24731188, 0.24731182)
 texture_normal = ExtResource("2_r4n6s")
 action = "jump"
@@ -52,3 +53,9 @@ rotation = 3.1415927
 scale = Vector2(0.26294348, 0.2476496)
 texture_normal = ExtResource("2_r4n6s")
 action = "down"
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer/TextureRect" unique_id=263273139]
+position = Vector2(211.00002, 4.9999995)
+scale = Vector2(0.054285742, 0.049999993)
+texture_normal = ExtResource("4_kqg4c")
+action = "pause"

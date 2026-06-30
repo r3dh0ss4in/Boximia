@@ -1,0 +1,182 @@
+[gd_scene format=3 uid="uid://j2euvcypbaky"]
+
+[ext_resource type="Script" uid="uid://cr13ui1x8svva" path="res://General/Scripts/pause_menu.gd" id="1_p2r31"]
+[ext_resource type="Shader" uid="uid://vtdx60b11keg" path="res://General/Scenes/pause_menu.gdshader" id="2_pr2od"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ali22"]
+shader = ExtResource("2_pr2od")
+shader_parameter/lod = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lun0m"]
+shader = ExtResource("2_pr2od")
+shader_parameter/lod = 0.0
+
+[sub_resource type="Animation" id="Animation_sxyxp"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HBoxContainer:modulate:r")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HBoxContainer:modulate:g")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HBoxContainer:modulate:b")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HBoxContainer:modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_d5whu"]
+resource_name = "blur"
+length = 0.3
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(2, 2),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0, 0.8, -0.050000004, -0.13333334, 0, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HBoxContainer:modulate:r")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0, 1, -0.04983334, -0.16666667, 0, 0),
+"times": PackedFloat32Array(0.001, 0.3)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HBoxContainer:modulate:g")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0, 1, -0.04983334, -0.16666667, 0, 0),
+"times": PackedFloat32Array(0.001, 0.3)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HBoxContainer:modulate:b")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0, 1, -0.04983334, -0.16666667, 0, 0),
+"times": PackedFloat32Array(0.001, 0.3)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HBoxContainer:modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0, 1, -0.04983334, -0.16666667, 0, 0),
+"times": PackedFloat32Array(0.001, 0.3)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lolit"]
+_data = {
+&"RESET": SubResource("Animation_sxyxp"),
+&"blur": SubResource("Animation_d5whu")
+}
+
+[node name="PauseMenu" type="Control" unique_id=151461185]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_p2r31")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1697707435]
+material = SubResource("ShaderMaterial_ali22")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=808789908]
+modulate = Color(0, 0, 0, 0)
+material = SubResource("ShaderMaterial_lun0m")
+layout_mode = 0
+offset_top = 202.0
+offset_right = 480.0
+offset_bottom = 272.0
+
+[node name="Resume" type="Button" parent="HBoxContainer" unique_id=1393383923]
+layout_mode = 2
+text = "Resume"
+
+[node name="Quit" type="Button" parent="HBoxContainer" unique_id=1788029360]
+layout_mode = 2
+text = "Quit"
+
+[node name="Home" type="Button" parent="HBoxContainer" unique_id=593984180]
+layout_mode = 2
+text = "Home"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=783815293]
+libraries/ = SubResource("AnimationLibrary_lolit")
+
+[connection signal="pressed" from="HBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="HBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="HBoxContainer/Home" to="." method="_on_home_pressed"]

@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bscwskvydiv3k" path="res://Levels/shado_2.png" id="3_nhegs"]
 [ext_resource type="PackedScene" uid="uid://dyub862n870fr" path="res://General/Scenes/point_green.tscn" id="4_fqeam"]
 [ext_resource type="Script" uid="uid://f4npxarc848j" path="res://General/Scripts/Level_Bounds.gd" id="8_nhegs"]
+[ext_resource type="PackedScene" uid="uid://j2euvcypbaky" path="res://General/Scenes/pause_menu.tscn" id="10_fqeam"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fqeam"]
 size = Vector2(167, 37)
@@ -18,6 +19,18 @@ size = Vector2(107, 29)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cjfep"]
 size = Vector2(38, 65)
+
+[sub_resource type="Gradient" id="Gradient_11wp0"]
+offsets = PackedFloat32Array(0, 0.0060241222, 0.8192771, 0.9939759, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.5582664, 0.5582664, 0.5582664, 1, 0.15334398, 0.15334398, 0.15334398, 1, 0.115107894, 0.115107894, 0.115107894, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cjfep"]
+gradient = SubResource("Gradient_11wp0")
+width = 400
+height = 400
+fill = 2
+fill_from = Vector2(0.5043478, 0.5043478)
+fill_to = Vector2(0.93043476, 0.17391305)
 
 [node name="01" type="Node2D" unique_id=1021706518]
 script = ExtResource("1_v4hta")
@@ -135,19 +148,17 @@ collision_mask = 16
 position = Vector2(966, 250.5)
 shape = SubResource("RectangleShape2D_cjfep")
 
-[node name="Shop" type="Control" parent="." unique_id=522705248]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=810268353]
+position = Vector2(108.000015, 196)
+rotation = 0.49741885
+scale = Vector2(0.36749995, 1.27375)
+energy = 4.0
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_cjfep")
 
-[node name="ColorRect" type="ColorRect" parent="Shop" unique_id=28201365]
-layout_mode = 0
-offset_left = 756.0
-offset_top = 81.0
-offset_right = 1145.0
-offset_bottom = 350.0
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=78678896]
+
+[node name="PauseMenu" parent="CanvasLayer" unique_id=151461185 instance=ExtResource("10_fqeam")]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

@@ -4,7 +4,6 @@ extends Node2D
 @onready var point_green: Node2D = %Point_green
 @onready var door: AnimatableBody2D = $Door
 @onready var player: Player = $Player
-@onready var shop: Control = $Shop
 
 @export var Distance:int=200
 @export var time:float=4
@@ -20,6 +19,7 @@ func _on_area_2d_2_body_entered(body: Node2D) -> void:
 	door_move()
 	point_green.visible=true
 	point_red.visible=false
+	#get_tree().paused=true
 
 func door_move():
 	door.sync_to_physics = true
