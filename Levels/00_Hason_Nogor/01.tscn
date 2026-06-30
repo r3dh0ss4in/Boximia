@@ -10,6 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://dyub862n870fr" path="res://General/Scenes/point_green.tscn" id="4_fqeam"]
 [ext_resource type="Script" uid="uid://f4npxarc848j" path="res://General/Scripts/Level_Bounds.gd" id="8_nhegs"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fqeam"]
+size = Vector2(167, 37)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gwtmf"]
 size = Vector2(107, 29)
 
@@ -43,6 +46,26 @@ unique_name_in_owner = true
 visible = false
 position = Vector2(966, 249)
 
+[node name="Door" type="AnimatableBody2D" parent="." unique_id=545120816]
+z_index = -2
+position = Vector2(63, -182)
+collision_layer = 64
+collision_mask = 16
+
+[node name="ColorRect" type="ColorRect" parent="Door" unique_id=1847199762]
+offset_left = 617.0
+offset_top = 163.0
+offset_right = 784.0
+offset_bottom = 199.0
+color = Color(0.3741391, 0.37413934, 0.37413916, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=2003710855]
+light_mask = 0
+visibility_layer = 16
+position = Vector2(700, 181)
+shape = SubResource("RectangleShape2D_fqeam")
+
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1165172510]
 z_index = -2
 position = Vector2(11.999939, 83.99997)
@@ -51,6 +74,7 @@ tile_set = ExtResource("1_jkad5")
 
 [node name="Player" parent="." unique_id=679804264 instance=ExtResource("2_fqjxr")]
 position = Vector2(83.99994, 219.99997)
+collision_mask = 71
 
 [node name="Shado2" type="Sprite2D" parent="." unique_id=993268922]
 position = Vector2(328.5, 227.99997)
@@ -100,7 +124,7 @@ collision_mask = 16
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=357909679]
 light_mask = 0
 visibility_layer = 0
-position = Vector2(764.5, 5.5)
+position = Vector2(768, -9)
 shape = SubResource("RectangleShape2D_gwtmf")
 
 [node name="Area2D2" type="Area2D" parent="." unique_id=708431679]
@@ -110,6 +134,20 @@ collision_mask = 16
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1847774330]
 position = Vector2(966, 250.5)
 shape = SubResource("RectangleShape2D_cjfep")
+
+[node name="Shop" type="Control" parent="." unique_id=522705248]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Shop" unique_id=28201365]
+layout_mode = 0
+offset_left = 756.0
+offset_top = 81.0
+offset_right = 1145.0
+offset_bottom = 350.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
