@@ -2,7 +2,7 @@ extends CanvasLayer
 
 @onready var label: Label = $Control/Label
 
-var items:int=0:
+var items:int=100:
 	set(value):
 		items=value
 		if label:

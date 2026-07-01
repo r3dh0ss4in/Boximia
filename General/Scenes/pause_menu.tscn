@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cr13ui1x8svva" path="res://General/Scripts/pause_menu.gd" id="1_p2r31"]
 [ext_resource type="Shader" uid="uid://vtdx60b11keg" path="res://General/Scenes/pause_menu.gdshader" id="2_pr2od"]
+[ext_resource type="FontFile" uid="uid://c8rqcausq07rh" path="res://General/Fonts/alagard.ttf" id="3_ali22"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ali22"]
 shader = ExtResource("2_pr2od")
@@ -154,25 +155,65 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=808789908]
+[node name="HBoxContainer" type="VBoxContainer" parent="." unique_id=1828005588]
 modulate = Color(0, 0, 0, 0)
 material = SubResource("ShaderMaterial_lun0m")
 layout_mode = 0
-offset_top = 202.0
-offset_right = 480.0
+offset_left = 239.0
+offset_top = 72.0
+offset_right = 456.0
 offset_bottom = 272.0
 
 [node name="Resume" type="Button" parent="HBoxContainer" unique_id=1393383923]
+unique_name_in_owner = true
 layout_mode = 2
+theme_override_colors/font_color = Color(0.10535555, 0.821389, 0.45850402, 1)
+theme_override_fonts/font = ExtResource("3_ali22")
+theme_override_font_sizes/font_size = 30
 text = "Resume"
 
 [node name="Quit" type="Button" parent="HBoxContainer" unique_id=1788029360]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.10535555, 0.821389, 0.45850402, 1)
+theme_override_fonts/font = ExtResource("3_ali22")
+theme_override_font_sizes/font_size = 30
 text = "Quit"
 
 [node name="Home" type="Button" parent="HBoxContainer" unique_id=593984180]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.10535555, 0.821389, 0.45850402, 1)
+theme_override_fonts/font = ExtResource("3_ali22")
+theme_override_font_sizes/font_size = 30
 text = "Home"
+
+[node name="HBoxContainer2" type="VBoxContainer" parent="." unique_id=527327414]
+material = SubResource("ShaderMaterial_lun0m")
+layout_mode = 0
+offset_left = 12.0
+offset_top = 72.0
+offset_right = 211.0
+offset_bottom = 272.0
+
+[node name="Health" type="Button" parent="HBoxContainer2" unique_id=1809229869]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.93122005, 0, 0.24439275, 1)
+theme_override_fonts/font = ExtResource("3_ali22")
+theme_override_font_sizes/font_size = 30
+text = "Health"
+
+[node name="Strong" type="Button" parent="HBoxContainer2" unique_id=1542785817]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.93122005, 0, 0.24439275, 1)
+theme_override_fonts/font = ExtResource("3_ali22")
+theme_override_font_sizes/font_size = 30
+text = "Strong"
+
+[node name="Power" type="Button" parent="HBoxContainer2" unique_id=2044381992]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.93122005, 0, 0.24439275, 1)
+theme_override_fonts/font = ExtResource("3_ali22")
+theme_override_font_sizes/font_size = 30
+text = "Power"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=783815293]
 libraries/ = SubResource("AnimationLibrary_lolit")
@@ -180,3 +221,5 @@ libraries/ = SubResource("AnimationLibrary_lolit")
 [connection signal="pressed" from="HBoxContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="HBoxContainer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="HBoxContainer/Home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="HBoxContainer2/Health" to="." method="_on_health_pressed"]
+[connection signal="pressed" from="HBoxContainer2/Strong" to="." method="_on_strong_pressed"]

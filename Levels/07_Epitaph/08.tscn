@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://do5bbbadoprra" path="res://Player/player.tscn" id="5_7bqs2"]
 [ext_resource type="Texture2D" uid="uid://bscwskvydiv3k" path="res://Levels/shado_2.png" id="6_ugjcs"]
 [ext_resource type="PackedScene" uid="uid://b7auxk346b7wt" path="res://Levels/07_Epitaph/moving_platform_4.tscn" id="8_7bqs2"]
+[ext_resource type="PackedScene" uid="uid://j2euvcypbaky" path="res://General/Scenes/pause_menu.tscn" id="9_6h4s6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7bqs2"]
 size = Vector2(109.75, 19.25)
@@ -81,5 +82,9 @@ shape = SubResource("RectangleShape2D_7bqs2")
 
 [node name="moving_platform_2" parent="." unique_id=35144224 instance=ExtResource("8_7bqs2")]
 position = Vector2(771, 625)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1616505329]
+
+[node name="PauseMenu" parent="CanvasLayer" unique_id=151461185 instance=ExtResource("9_6h4s6")]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

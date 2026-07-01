@@ -19,7 +19,6 @@ func _on_area_2d_2_body_entered(body: Node2D) -> void:
 	door_move()
 	point_green.visible=true
 	point_red.visible=false
-	#get_tree().paused=true
 
 func door_move():
 	door.sync_to_physics = true

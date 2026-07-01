@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://do5bbbadoprra" path="res://Player/player.tscn" id="3_65gfl"]
 [ext_resource type="Texture2D" uid="uid://b5qamqaryhqm7" path="res://Levels/MU Campus/04_02.png" id="4_65gfl"]
 [ext_resource type="Texture2D" uid="uid://bscwskvydiv3k" path="res://Levels/shado_2.png" id="5_o7iys"]
+[ext_resource type="PackedScene" uid="uid://j2euvcypbaky" path="res://General/Scenes/pause_menu.tscn" id="7_xm7p8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xm7p8"]
 size = Vector2(630, 7.5)
@@ -75,6 +76,10 @@ collision_mask = 16
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=585520676]
 position = Vector2(0, 350.5)
 shape = SubResource("RectangleShape2D_o7iys")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2048507432]
+
+[node name="PauseMenu" parent="CanvasLayer" unique_id=151461185 instance=ExtResource("7_xm7p8")]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

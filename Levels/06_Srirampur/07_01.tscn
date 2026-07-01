@@ -7,6 +7,7 @@
 [ext_resource type="TileSet" uid="uid://1kr8vdmarlj2" path="res://Levels/Hason Nogor/Tileset/Hason_Nogor_2.tres" id="4_eqomg"]
 [ext_resource type="PackedScene" uid="uid://do5bbbadoprra" path="res://Player/player.tscn" id="5_7pw2s"]
 [ext_resource type="Texture2D" uid="uid://bscwskvydiv3k" path="res://Levels/shado_2.png" id="7_eqomg"]
+[ext_resource type="PackedScene" uid="uid://j2euvcypbaky" path="res://General/Scenes/pause_menu.tscn" id="8_7pw2s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eqomg"]
 size = Vector2(1144, 9.5)
@@ -82,6 +83,10 @@ position = Vector2(552.8431, 250.51653)
 rotation = -1.5707964
 scale = Vector2(0.08334621, 1.112061)
 texture = ExtResource("7_eqomg")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=116526780]
+
+[node name="PauseMenu" parent="CanvasLayer" unique_id=151461185 instance=ExtResource("8_7pw2s")]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

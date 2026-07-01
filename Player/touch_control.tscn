@@ -54,7 +54,8 @@ scale = Vector2(0.26294348, 0.2476496)
 texture_normal = ExtResource("2_r4n6s")
 action = "down"
 
-[node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer/TextureRect" unique_id=263273139]
+[node name="Pause" type="TouchScreenButton" parent="CanvasLayer/TextureRect" unique_id=263273139]
+modulate = Color(1, 1, 1, 0.84313726)
 position = Vector2(211.00002, 4.9999995)
 scale = Vector2(0.054285742, 0.049999993)
 texture_normal = ExtResource("4_kqg4c")

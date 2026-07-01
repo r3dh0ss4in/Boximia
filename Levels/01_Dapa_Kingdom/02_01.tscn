@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bimfqaxc58rd1" path="res://Levels/Dapa Kingdom/02_01.png" id="3_q0fob"]
 [ext_resource type="Texture2D" uid="uid://bscwskvydiv3k" path="res://Levels/shado_2.png" id="4_dbfn8"]
 [ext_resource type="PackedScene" uid="uid://do5bbbadoprra" path="res://Player/player.tscn" id="5_2qbtt"]
+[ext_resource type="PackedScene" uid="uid://j2euvcypbaky" path="res://General/Scenes/pause_menu.tscn" id="7_dbfn8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q0fob"]
 size = Vector2(208, 22)
@@ -74,6 +75,10 @@ collision_mask = 16
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1111436013]
 position = Vector2(1175.75, 295.75)
 shape = SubResource("RectangleShape2D_dbfn8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=347418796]
+
+[node name="PauseMenu" parent="CanvasLayer" unique_id=151461185 instance=ExtResource("7_dbfn8")]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

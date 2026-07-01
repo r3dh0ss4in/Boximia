@@ -1,0 +1,212 @@
+[gd_scene format=4 uid="uid://dnphpirhdi487"]
+
+[ext_resource type="Script" uid="uid://c5a7kj2hthy75" path="res://General/Scripts/credits.gd" id="1_f0rmq"]
+[ext_resource type="Texture2D" uid="uid://bq4dn6kusvgmt" path="res://Levels/Hansi/05_01.png" id="2_ov0ho"]
+[ext_resource type="TileSet" uid="uid://1kr8vdmarlj2" path="res://Levels/Hason Nogor/Tileset/Hason_Nogor_2.tres" id="3_ye086"]
+[ext_resource type="Texture2D" uid="uid://mke0knm0hdeh" path="res://General/Images/Boximia_1.png" id="4_k7iqv"]
+[ext_resource type="Texture2D" uid="uid://cq0ghgkkxfk2v" path="res://General/Images/Boximia_2.png" id="5_pha45"]
+[ext_resource type="Texture2D" uid="uid://cj877w86u2ckl" path="res://General/Images/Boximia_3.png" id="6_fa8ax"]
+[ext_resource type="Texture2D" uid="uid://d4jh28ve7g3ea" path="res://General/Images/Boximia_4.png" id="7_0hcjh"]
+[ext_resource type="Texture2D" uid="uid://c8e13cgkttlsr" path="res://General/Images/Boximia_5.png" id="8_itmcv"]
+[ext_resource type="Texture2D" uid="uid://jhdaxev32qcu" path="res://General/Images/Boximia_6.png" id="9_21r60"]
+[ext_resource type="Texture2D" uid="uid://cafkrri37iyxw" path="res://General/Images/Boximia_7.png" id="10_4v1gu"]
+[ext_resource type="Texture2D" uid="uid://cxr6nav3yxgha" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_000.png" id="11_kpuh4"]
+[ext_resource type="Texture2D" uid="uid://b5aoghlwhu4w8" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_001.png" id="12_02kny"]
+[ext_resource type="Texture2D" uid="uid://cg0qg6im1htyo" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_002.png" id="13_bfjo1"]
+[ext_resource type="Texture2D" uid="uid://b4gihwdaqx03y" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_003.png" id="14_rtilb"]
+[ext_resource type="Texture2D" uid="uid://kktssx3cpfsk" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_004.png" id="15_p5akw"]
+[ext_resource type="Texture2D" uid="uid://cvwtpciecjcp4" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_005.png" id="16_j28gg"]
+[ext_resource type="Texture2D" uid="uid://b3xlk0pum5w2n" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_006.png" id="17_31ay3"]
+[ext_resource type="Texture2D" uid="uid://b6nax8kirssp3" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_007.png" id="18_68qg5"]
+[ext_resource type="Texture2D" uid="uid://y13jrq06u2j3" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_008.png" id="19_o7dru"]
+[ext_resource type="Texture2D" uid="uid://d1usdllwpiwn5" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_009.png" id="20_hrgpw"]
+[ext_resource type="Texture2D" uid="uid://b4w4m0nlo74j4" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_010.png" id="21_r4nq2"]
+[ext_resource type="Texture2D" uid="uid://b67mowld1eg1p" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_011.png" id="22_wohw8"]
+[ext_resource type="Texture2D" uid="uid://h1rlpex8668i" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_012.png" id="23_midpy"]
+[ext_resource type="Texture2D" uid="uid://dllna7dsruu8v" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_013.png" id="24_jw7jv"]
+[ext_resource type="Texture2D" uid="uid://5d0t8wca1ryl" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_014.png" id="25_cno81"]
+[ext_resource type="Texture2D" uid="uid://bjk200hc3g1kg" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_015.png" id="26_p3g3h"]
+[ext_resource type="Texture2D" uid="uid://wldcilvm01xh" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_016.png" id="27_hnlks"]
+[ext_resource type="Texture2D" uid="uid://db03xi5n0jy7s" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_017.png" id="28_r8xpx"]
+[ext_resource type="Texture2D" uid="uid://bscwskvydiv3k" path="res://Levels/shado_2.png" id="29_bikoh"]
+[ext_resource type="FontFile" uid="uid://c8rqcausq07rh" path="res://General/Fonts/alagard.ttf" id="30_b0cug"]
+[ext_resource type="FontFile" uid="uid://c27vw7oc3x4jd" path="res://General/Fonts/Gagalin-Regular.otf" id="31_yp526"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8dk5v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_k7iqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pha45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fa8ax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0hcjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_itmcv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_21r60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4v1gu")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 1.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_crxnw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_kpuh4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_02kny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_bfjo1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_rtilb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_p5akw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_j28gg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_31ay3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_68qg5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_o7dru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_hrgpw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_r4nq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_wohw8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_midpy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_jw7jv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_cno81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_p3g3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_hnlks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_r8xpx")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 10.0
+}]
+
+[node name="Credits" type="CanvasLayer" unique_id=1513877377]
+script = ExtResource("1_f0rmq")
+
+[node name="Control" type="Control" parent="." unique_id=231107737]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="0501" type="Sprite2D" parent="Control" unique_id=909811371]
+position = Vector2(134.25, 132)
+scale = Vector2(1.0460614, 1.152)
+texture = ExtResource("2_ov0ho")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Control" unique_id=977671924]
+modulate = Color(1, 1, 1, 0.69411767)
+tile_map_data = PackedByteArray("AAAGAAUAAQAAAAgAAAAGAAYAAQAAAAkAAAAGAAcAAQAIAAkAAAAGAAgAAQACAAkAAAAHAAUAAQABAAgAAAAHAAYAAQABAAkAAAAHAAcAAQABAAoAAAAHAAgAAQABAAsAAAAIAAUAAQACAAgAAAAIAAYAAQACAAkAAAAIAAcAAQACAAoAAAAIAAgAAQACAAsAAAAJAAUAAQADAAgAAAAJAAYAAQADAAkAAAAJAAcAAQADAAoAAAAJAAgAAQADAAsAAAAKAAUAAQACAAgAAAAKAAYAAQACAAkAAAAKAAcAAQACAAoAAAAKAAgAAQACAAsAAAALAAUAAQADAAgAAAALAAYAAQADAAkAAAALAAcAAQADAAoAAAALAAgAAQADAAsAAAAMAAUAAQAEAAgAAAAMAAYAAQAEAAkAAAAMAAcAAQAEAAoAAAAMAAgAAQAEAAsAAAANAAUAAQAFAAgAAAANAAYAAQAFAAkAAAANAAcAAQAFAAoAAAANAAgAAQAFAAsAAAAAAAcAAQACAAgAAAAAAAgAAQACAAkAAAABAAcAAQADAAgAAAABAAgAAQADAAkAAAACAAcAAQACAAgAAAACAAgAAQACAAkAAAADAAcAAQADAAgAAAADAAgAAQADAAkAAAAEAAcAAQACAAgAAAAEAAgAAQACAAkAAAAFAAcAAQACAAgAAAAFAAgAAQACAAkAAAA=")
+tile_set = ExtResource("3_ye086")
+
+[node name="Logo" type="Control" parent="Control" unique_id=476744939]
+anchors_preset = 0
+offset_left = 219.0
+offset_top = 41.0
+offset_right = 406.0
+offset_bottom = 41.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/Logo" unique_id=1896944794]
+position = Vector2(-136, 57)
+scale = Vector2(0.18695779, 0.17786084)
+sprite_frames = SubResource("SpriteFrames_8dk5v")
+animation = &"Idle"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control" unique_id=902719596]
+position = Vector2(54.562492, 185.3125)
+scale = Vector2(0.10541668, 0.14069445)
+sprite_frames = SubResource("SpriteFrames_crxnw")
+animation = &"Idle"
+
+[node name="Shado2" type="Sprite2D" parent="Control" unique_id=1424266863]
+position = Vector2(248.80386, 200.36371)
+rotation = -1.5707964
+scale = Vector2(0.119643115, 0.50531375)
+texture = ExtResource("29_bikoh")
+
+[node name="MainMenu" type="VBoxContainer" parent="Control" unique_id=334222378]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45600003
+anchor_top = 0.15200001
+anchor_right = 0.846
+anchor_bottom = 0.63000005
+offset_left = 0.11997986
+offset_top = 90.96
+offset_right = -0.08001709
+offset_bottom = 90.89998
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Home" type="Button" parent="Control/MainMenu" unique_id=238078290]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("30_b0cug")
+theme_override_font_sizes/font_size = 20
+text = "Home"
+
+[node name="BOXIMIA" type="Label" parent="." unique_id=531029065]
+offset_left = 42.0
+offset_top = 7.0
+offset_right = 124.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("31_yp526")
+theme_override_font_sizes/font_size = 25
+text = "BOXIMIA"
+
+[node name="Credits" type="Label" parent="." unique_id=1371891361]
+offset_left = 213.0
+offset_top = 59.0
+offset_right = 419.0
+offset_bottom = 90.0
+theme_override_font_sizes/font_size = 16
+text = "Director: Sudeshna Roy Pima"
+
+[connection signal="pressed" from="Control/MainMenu/Home" to="." method="_on_play_pressed"]

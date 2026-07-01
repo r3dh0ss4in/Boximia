@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://do5bbbadoprra" path="res://Player/player.tscn" id="5_n1l6h"]
 [ext_resource type="Texture2D" uid="uid://bscwskvydiv3k" path="res://Levels/shado_2.png" id="7_8yaa6"]
 [ext_resource type="PackedScene" uid="uid://blgc5ix0ytf6g" path="res://Levels/06_Srirampur/moving_platform_2.tscn" id="8_83s6p"]
+[ext_resource type="PackedScene" uid="uid://j2euvcypbaky" path="res://General/Scenes/pause_menu.tscn" id="9_n1l6h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8yaa6"]
 size = Vector2(583, 11)
@@ -91,6 +92,10 @@ position = Vector2(934, 332)
 
 [node name="moving_platform_3" parent="." unique_id=2137999919 instance=ExtResource("8_83s6p")]
 position = Vector2(619, 328)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1032246746]
+
+[node name="PauseMenu" parent="CanvasLayer" unique_id=151461185 instance=ExtResource("9_n1l6h")]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

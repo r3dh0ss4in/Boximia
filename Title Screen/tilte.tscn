@@ -229,4 +229,5 @@ theme_override_font_sizes/font_size = 25
 text = "BOXIMIA"
 
 [connection signal="pressed" from="Control/MainMenu/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Control/MainMenu/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Control/MainMenu/Quit" to="." method="_on_quit_pressed"]
