@@ -77,4 +77,11 @@ tile_set = ExtResource("7_7k82k")
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=151461185 instance=ExtResource("8_63aow")]
 
+[node name="tmp" type="Label" parent="." unique_id=1186599818]
+offset_left = 916.0
+offset_top = 104.0
+offset_right = 1177.0
+offset_bottom = 127.0
+text = "Right"
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

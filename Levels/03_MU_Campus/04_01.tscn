@@ -70,4 +70,11 @@ shape = SubResource("RectangleShape2D_ifpy2")
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=151461185 instance=ExtResource("7_um2ki")]
 
+[node name="tmp" type="Label" parent="." unique_id=1585406095]
+offset_left = 296.0
+offset_top = 62.0
+offset_right = 557.0
+offset_bottom = 85.0
+text = "Down"
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

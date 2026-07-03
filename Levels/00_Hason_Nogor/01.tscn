@@ -32,6 +32,9 @@ fill = 2
 fill_from = Vector2(0.5043478, 0.5043478)
 fill_to = Vector2(0.93043476, 0.17391305)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iwwin"]
+size = Vector2(6.5, 66)
+
 [node name="01" type="Node2D" unique_id=1021706518]
 script = ExtResource("1_v4hta")
 
@@ -90,14 +93,14 @@ position = Vector2(83.99994, 219.99997)
 collision_mask = 71
 
 [node name="Shado2" type="Sprite2D" parent="." unique_id=993268922]
-position = Vector2(328.5, 227.99997)
-scale = Vector2(0.4980469, 0.51996106)
+position = Vector2(152.99998, 227.99997)
+scale = Vector2(0.26953125, 0.51996106)
 texture = ExtResource("3_nhegs")
 
 [node name="Shado3" type="Sprite2D" parent="." unique_id=1966702591]
-position = Vector2(902.0695, 225.5698)
+position = Vector2(1114.2849, 225.56982)
 rotation = -3.1415925
-scale = Vector2(0.5364748, 0.5164861)
+scale = Vector2(0.26015276, 0.5164861)
 texture = ExtResource("3_nhegs")
 
 [node name="Shado5" type="Sprite2D" parent="." unique_id=2062798216]
@@ -110,11 +113,6 @@ texture = ExtResource("3_nhegs")
 position = Vector2(610.60144, 99.97674)
 rotation = 1.5707964
 scale = Vector2(0.16795102, 1.2856709)
-texture = ExtResource("3_nhegs")
-
-[node name="Shado7" type="Sprite2D" parent="." unique_id=258896597]
-position = Vector2(1430.0001, 231.99998)
-scale = Vector2(0.2594401, 0.5345667)
 texture = ExtResource("3_nhegs")
 
 [node name="Shado8" type="Sprite2D" parent="." unique_id=1242957062]
@@ -149,6 +147,7 @@ position = Vector2(966, 250.5)
 shape = SubResource("RectangleShape2D_cjfep")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=810268353]
+visible = false
 position = Vector2(108.000015, 196)
 rotation = 0.49741885
 scale = Vector2(0.36749995, 1.27375)
@@ -160,5 +159,28 @@ texture = SubResource("GradientTexture2D_cjfep")
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=151461185 instance=ExtResource("10_fqeam")]
 
+[node name="tmp" type="Label" parent="." unique_id=765052125]
+offset_left = 644.0
+offset_top = 121.0
+offset_right = 905.0
+offset_bottom = 144.0
+text = "Make takla store green then go up"
+
+[node name="Area2D3" type="Area2D" parent="." unique_id=1679845561]
+position = Vector2(713, 5)
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3" unique_id=1008633245]
+position = Vector2(189.25, 255)
+shape = SubResource("RectangleShape2D_iwwin")
+
+[node name="rock" type="Marker2D" parent="." unique_id=1037723122]
+position = Vector2(929, 77)
+
+[node name="rock2" type="Marker2D" parent="." unique_id=868782199]
+position = Vector2(968, 66)
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="Area2D3" to="." method="_on_area_2d_3_body_entered"]

@@ -4,7 +4,7 @@ extends CanvasLayer
 
 @export var max_health:int=50
 
-var health:int=20:
+var health:int=50:
 	set(value):
 		health=clamp(value,0,max_health)
 		if label:

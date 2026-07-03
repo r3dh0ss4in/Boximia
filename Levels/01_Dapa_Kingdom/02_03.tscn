@@ -38,8 +38,8 @@ texture = ExtResource("3_whubo")
 position = Vector2(607, 237)
 
 [node name="Shado2" type="Sprite2D" parent="." unique_id=1419181541]
-position = Vector2(620.75, 128)
-scale = Vector2(0.8310547, 0.33008763)
+position = Vector2(168.24997, 128)
+scale = Vector2(0.24186195, 0.33008763)
 texture = ExtResource("5_agviy")
 
 [node name="Shado3" type="Sprite2D" parent="." unique_id=1762869655]
@@ -79,6 +79,13 @@ shape = SubResource("RectangleShape2D_whubo")
 [node name="CanvasLayer" type="CanvasLayer" parent="Area2D2" unique_id=1250999058]
 
 [node name="PauseMenu" parent="Area2D2/CanvasLayer" unique_id=151461185 instance=ExtResource("7_xp1jd")]
+
+[node name="tmp" type="Label" parent="." unique_id=312748928]
+offset_left = 617.0
+offset_top = 165.0
+offset_right = 878.0
+offset_bottom = 188.0
+text = "Right"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

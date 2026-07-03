@@ -81,5 +81,12 @@ shape = SubResource("RectangleShape2D_ujgbf")
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=151461185 instance=ExtResource("7_ujgbf")]
 
+[node name="tmp" type="Label" parent="." unique_id=1403684750]
+offset_left = 137.0
+offset_top = 159.0
+offset_right = 398.0
+offset_bottom = 182.0
+text = "Right"
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

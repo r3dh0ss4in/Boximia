@@ -36,8 +36,8 @@ scale = Vector2(1.6161879, 1.5405904)
 texture = ExtResource("3_88llr")
 
 [node name="Shado2" type="Sprite2D" parent="." unique_id=337267200]
-position = Vector2(175.50003, 145.875)
-scale = Vector2(0.26627597, 0.32935733)
+position = Vector2(131.00006, 145.875)
+scale = Vector2(0.2083333, 0.32935733)
 texture = ExtResource("4_a74bw")
 
 [node name="Shado4" type="Sprite2D" parent="." unique_id=1967562055]
@@ -80,6 +80,13 @@ shape = SubResource("RectangleShape2D_0sn6h")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=272169289]
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=151461185 instance=ExtResource("7_88llr")]
+
+[node name="tmp" type="Label" parent="." unique_id=1219147483]
+offset_left = 200.0
+offset_top = 128.0
+offset_right = 461.0
+offset_bottom = 151.0
+text = "Right"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://6dukpoi2x428"]
+
+[ext_resource type="Script" uid="uid://egmgkquv7p11" path="res://General/Scripts/ohho_rock.gd" id="1_u8mtb"]
+[ext_resource type="Texture2D" uid="uid://bblh3e2sj0wtm" path="res://General/Images/ohho_stone.png" id="2_u8mtb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g7wbm"]
+size = Vector2(20, 27)
+
+[node name="ohho_rock" type="Area2D" unique_id=2124027909]
+z_index = -3
+collision_layer = 0
+collision_mask = 23
+script = ExtResource("1_u8mtb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1679783825]
+position = Vector2(0, -3.5)
+shape = SubResource("RectangleShape2D_g7wbm")
+
+[node name="OhhoStone" type="Sprite2D" parent="." unique_id=251759743]
+position = Vector2(-1.9073486e-06, 1.999999)
+scale = Vector2(0.03613281, 0.045328762)
+texture = ExtResource("2_u8mtb")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

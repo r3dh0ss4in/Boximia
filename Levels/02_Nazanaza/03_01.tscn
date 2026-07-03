@@ -37,8 +37,8 @@ scale = Vector2(1.6617259, 1.3510829)
 texture = ExtResource("3_erb2a")
 
 [node name="Shado2" type="Sprite2D" parent="." unique_id=1116101290]
-position = Vector2(348.5, 134.99998)
-scale = Vector2(0.485026, 0.338851)
+position = Vector2(172, 134.99998)
+scale = Vector2(0.2552083, 0.338851)
 texture = ExtResource("4_yscoc")
 
 [node name="Shado3" type="Sprite2D" parent="." unique_id=286257606]
@@ -48,15 +48,15 @@ scale = Vector2(0.1767082, 0.338851)
 texture = ExtResource("4_yscoc")
 
 [node name="Shado4" type="Sprite2D" parent="." unique_id=1550575797]
-position = Vector2(616.8974, 35.615387)
+position = Vector2(616.8974, 31.58911)
 rotation = 1.5707964
-scale = Vector2(0.11134492, 1.242054)
+scale = Vector2(0.10610237, 1.242054)
 texture = ExtResource("4_yscoc")
 
 [node name="Shado5" type="Sprite2D" parent="." unique_id=1816103476]
-position = Vector2(642, 242.41641)
+position = Vector2(642, 259.32678)
 rotation = -1.5707964
-scale = Vector2(0.083458975, 1.242054)
+scale = Vector2(0.06144028, 1.242054)
 texture = ExtResource("4_yscoc")
 
 [node name="Player" parent="." unique_id=679804264 instance=ExtResource("5_vk52s")]
@@ -92,6 +92,20 @@ tile_set = ExtResource("7_yscoc")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=530025350]
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=151461185 instance=ExtResource("8_vk52s")]
+
+[node name="tmp" type="Label" parent="." unique_id=1340820141]
+offset_left = 854.0
+offset_top = 38.0
+offset_right = 1115.0
+offset_bottom = 61.0
+text = "Left"
+
+[node name="tmp2" type="Label" parent="." unique_id=1981393651]
+offset_left = 86.0
+offset_top = 19.0
+offset_right = 347.0
+offset_bottom = 42.0
+text = "UP"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

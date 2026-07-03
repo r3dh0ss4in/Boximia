@@ -33,8 +33,8 @@ hight = 302
 metadata/_custom_type_script = "uid://f4npxarc848j"
 
 [node name="Shado2" type="Sprite2D" parent="." unique_id=1872217852]
-position = Vector2(249.99998, 132)
-scale = Vector2(0.34765622, 0.35637778)
+position = Vector2(106.000015, 132)
+scale = Vector2(0.16015626, 0.35637778)
 texture = ExtResource("4_lw4nh")
 
 [node name="Shado3" type="Sprite2D" parent="." unique_id=1335367515]
@@ -69,5 +69,12 @@ shape = SubResource("RectangleShape2D_lw4nh")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1085989752]
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=151461185 instance=ExtResource("7_lw4nh")]
+
+[node name="tmp" type="Label" parent="." unique_id=1935755363]
+offset_left = 874.0
+offset_top = 140.0
+offset_right = 1135.0
+offset_bottom = 163.0
+text = "Down"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
