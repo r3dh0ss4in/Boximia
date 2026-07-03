@@ -2,13 +2,17 @@ extends Control
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var resume_: Button = %Resume
+@onready var health_lbl: Label = $HBoxContainer3/health_lbl
+@onready var max_health_lbl: Label = $HBoxContainer3/max_health_lbl
 
 func pause():
 	show()
 	get_tree().paused=true
 	resume_.grab_focus()
+	health_lbl.text=str(PlayerHealth.health)
+	max_health_lbl.text=str(PlayerHealth.max_health)
 	animation_player.play("blur")
-	
+
 func resume():
 	get_tree().paused=false
 	animation_player.play_backwards("blur")
