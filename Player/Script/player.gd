@@ -17,7 +17,8 @@ var pre_state:PlayerState:
 @onready var f_ground_ray_cast_2: RayCast2D = $f_ground_RayCast2
 @onready var wall_ray_cast: RayCast2D = $wall_RayCast
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite
-
+@onready var attack: Marker2D = $Attack
+@onready var label: Label = $Label
 #endregion
 
 #region // Standard Variables
@@ -25,8 +26,6 @@ var direction:Vector2=Vector2.ZERO
 @export var SPEED:float=150
 @export var JUMP_VELOCITY:float=-400
 #endregion
-
-@onready var label: Label = $Label
 
 
 func _ready() -> void:
@@ -38,11 +37,14 @@ func _unhandled_input(event: InputEvent) -> void:
 	change_state(curr_state.handle_input(event))
 
 func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("shoot"):
+		attack_()
 	update_direction()
 	change_state(curr_state.process(delta))
 
 func _physics_process(delta: float) -> void:
 	velocity+=get_gravity()*delta
+	Global.player_position=global_position
 	move_and_slide()
 	change_state(curr_state.physics_process(delta))
 
@@ -89,4 +91,10 @@ func update_direction():
 		elif direction.x>0:
 			animated_sprite.flip_h=false
 	pass
+
+func attack_():
+	const atk=preload("res://Player/States/attack_area.tscn")
+	var new_ik=atk.instantiate()
+	new_ik.global_position=attack.global_position
+	get_parent().add_child(new_ik)
 	

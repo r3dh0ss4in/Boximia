@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dcnym4cn8darq"]
+
+[ext_resource type="Script" uid="uid://beur8vnfbc0jb" path="res://Player/Script/attack_area.gd" id="1_idjiq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d50fa"]
+size = Vector2(95, 13)
+
+[node name="AttackArea" type="Area2D" unique_id=1691791882]
+script = ExtResource("1_idjiq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=916723438]
+shape = SubResource("RectangleShape2D_d50fa")

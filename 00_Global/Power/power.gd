@@ -1,3 +1,3 @@
 extends Node
 
-var power:int=10
+var amount:int=10
