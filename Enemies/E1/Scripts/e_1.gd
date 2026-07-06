@@ -8,6 +8,7 @@ var current_state: State=State.PATROL:
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var label: Label = $Label
+@onready var attk: Marker2D = $Attack
 
 
 var direction: float = 1.0 
@@ -142,3 +143,14 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 	elif current_state == State.ATTACK:
 		if player_ref:
 			current_state = State.CHASE
+
+func _attack():
+	const atk=preload("res://Enemies/e_attack.tscn")
+	var new_ik=atk.instantiate()
+	new_ik.global_position=attk.global_position
+	get_parent().add_child(new_ik)
+
+
+func _on_timer_timeout() -> void:
+	if current_state==State.ATTACK:
+		_attack()

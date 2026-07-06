@@ -423,9 +423,6 @@ z_index = -1
 collision_layer = 64
 collision_mask = 129
 script = ExtResource("1_tc81p")
-SPEED = null
-CHASE_SPEED = null
-MAX_HEALTH = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=985520905]
 position = Vector2(0, -5.000004)
@@ -458,8 +455,14 @@ shape = SubResource("CircleShape2D_53c4y")
 offset_right = 40.0
 offset_bottom = 23.0
 
+[node name="Attack" type="Marker2D" parent="." unique_id=396668290]
+
+[node name="Timer" type="Timer" parent="." unique_id=160989080]
+autostart = true
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="PlayerDetector" to="." method="_on_player_detector_body_entered"]
 [connection signal="body_exited" from="PlayerDetector" to="." method="_on_player_detector_body_exited"]
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
 [connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
