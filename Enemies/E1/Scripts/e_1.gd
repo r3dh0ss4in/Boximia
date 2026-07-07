@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-enum State { PATROL, CHASE, ATTACK, HURT }
+enum State { PATROL, CHASE, ATTACK, HURT, DEAD }
 var current_state: State=State.PATROL:
 	set(value):
 		current_state=value
@@ -21,7 +21,7 @@ var current_health: int
 
 
 func _ready() -> void:
-	var current_health=MAX_HEALTH
+	current_health=MAX_HEALTH
 	animated_sprite_2d.animation_finished.connect(_on_animated_sprite_2d_animation_finished)
 
 func _physics_process(delta: float) -> void:
@@ -36,6 +36,8 @@ func _physics_process(delta: float) -> void:
 			attack()
 		State.HURT:
 			hurt()
+		State.DEAD:
+			die()
 	move_and_slide()
 
 func patrol():
@@ -63,6 +65,8 @@ func attack():
 func hurt():
 	velocity.x=0
 	animated_sprite_2d.play("Hurt")
+	await get_tree().create_timer(1).timeout
+	current_state=State.CHASE
 	
 
 func take_damage():
@@ -70,12 +74,14 @@ func take_damage():
 		return
 	current_health-=Power.amount
 	if current_health<=0:
-		die()
+		current_state=State.DEAD
 	else:
 		current_state=State.HURT
 
 func die():
+	velocity.x=0
 	animated_sprite_2d.play("Dead")
+	await get_tree().create_timer(1).timeout
 	queue_free()
 
 func change_direction():

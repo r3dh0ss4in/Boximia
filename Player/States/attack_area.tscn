@@ -6,7 +6,11 @@
 size = Vector2(95, 13)
 
 [node name="AttackArea" type="Area2D" unique_id=1691791882]
+collision_layer = 0
+collision_mask = 64
 script = ExtResource("1_idjiq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=916723438]
 shape = SubResource("RectangleShape2D_d50fa")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
