@@ -8,3 +8,4 @@ func _ready() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
 		PlayerHealth.health-=10
+		body.take_damage()

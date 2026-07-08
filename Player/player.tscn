@@ -18,18 +18,30 @@
 [ext_resource type="Texture2D" uid="uid://kktssx3cpfsk" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_004.png" id="6_sm0op"]
 [ext_resource type="Texture2D" uid="uid://cvwtpciecjcp4" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_005.png" id="7_76lrf"]
 [ext_resource type="Texture2D" uid="uid://ejjv0gfak0ps" path="res://Player/Sprite/farena/Falling Down/0_Necromancer_of_the_Shadow_Falling Down_005.png" id="7_ntwt4"]
+[ext_resource type="Texture2D" uid="uid://bypu8aq67ytrp" path="res://Player/Sprite/farena/Hurt/0_Necromancer_of_the_Shadow_Hurt_000.png" id="8_c7st8"]
 [ext_resource type="Texture2D" uid="uid://b3xlk0pum5w2n" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_006.png" id="8_efx54"]
 [ext_resource type="Texture2D" uid="uid://b6nax8kirssp3" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_007.png" id="9_755ss"]
+[ext_resource type="Texture2D" uid="uid://bgowbpj105qtn" path="res://Player/Sprite/farena/Hurt/0_Necromancer_of_the_Shadow_Hurt_001.png" id="9_i8h25"]
+[ext_resource type="Texture2D" uid="uid://dn6r3gb5v2hru" path="res://Player/Sprite/farena/Hurt/0_Necromancer_of_the_Shadow_Hurt_002.png" id="10_2krxc"]
 [ext_resource type="Texture2D" uid="uid://y13jrq06u2j3" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_008.png" id="10_bbimk"]
 [ext_resource type="Texture2D" uid="uid://d1usdllwpiwn5" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_009.png" id="11_m0h3t"]
+[ext_resource type="Texture2D" uid="uid://hfo7mc3kqn3v" path="res://Player/Sprite/farena/Hurt/0_Necromancer_of_the_Shadow_Hurt_003.png" id="11_mw2es"]
 [ext_resource type="Texture2D" uid="uid://b4w4m0nlo74j4" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_010.png" id="12_i4o1l"]
+[ext_resource type="Texture2D" uid="uid://1mknb8y82o8p" path="res://Player/Sprite/farena/Hurt/0_Necromancer_of_the_Shadow_Hurt_004.png" id="12_p7odc"]
+[ext_resource type="Texture2D" uid="uid://dj2bjstetbl78" path="res://Player/Sprite/farena/Hurt/0_Necromancer_of_the_Shadow_Hurt_005.png" id="13_beqdq"]
 [ext_resource type="Texture2D" uid="uid://b67mowld1eg1p" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_011.png" id="13_j2n6q"]
 [ext_resource type="Texture2D" uid="uid://h1rlpex8668i" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_012.png" id="14_c6x0f"]
+[ext_resource type="Texture2D" uid="uid://b5ktbch7awv0l" path="res://Player/Sprite/farena/Hurt/0_Necromancer_of_the_Shadow_Hurt_006.png" id="14_get7g"]
 [ext_resource type="Texture2D" uid="uid://dllna7dsruu8v" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_013.png" id="15_jp1hh"]
+[ext_resource type="Texture2D" uid="uid://ry3ylwagl2c0" path="res://Player/Sprite/farena/Hurt/0_Necromancer_of_the_Shadow_Hurt_007.png" id="15_pfstq"]
 [ext_resource type="Texture2D" uid="uid://5d0t8wca1ryl" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_014.png" id="16_qs4pp"]
+[ext_resource type="Texture2D" uid="uid://kfdjh1lqc2uu" path="res://Player/Sprite/farena/Hurt/0_Necromancer_of_the_Shadow_Hurt_008.png" id="16_tklvp"]
+[ext_resource type="Texture2D" uid="uid://dj08g74kmesux" path="res://Player/Sprite/farena/Hurt/0_Necromancer_of_the_Shadow_Hurt_009.png" id="17_gv7t5"]
 [ext_resource type="Texture2D" uid="uid://bjk200hc3g1kg" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_015.png" id="17_iyprq"]
 [ext_resource type="Texture2D" uid="uid://wldcilvm01xh" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_016.png" id="18_f4lon"]
+[ext_resource type="Texture2D" uid="uid://bebh86p1dijsv" path="res://Player/Sprite/farena/Hurt/0_Necromancer_of_the_Shadow_Hurt_010.png" id="18_hhxpw"]
 [ext_resource type="Texture2D" uid="uid://db03xi5n0jy7s" path="res://Player/Sprite/farena/Idle Blinking/0_Necromancer_of_the_Shadow_Idle Blinking_017.png" id="19_8ynux"]
+[ext_resource type="Texture2D" uid="uid://dtcogco1co7wy" path="res://Player/Sprite/farena/Hurt/0_Necromancer_of_the_Shadow_Hurt_011.png" id="19_ghd3c"]
 [ext_resource type="Texture2D" uid="uid://b30tfyi7u1lyv" path="res://Player/Sprite/farena/Jump Start/0_Necromancer_of_the_Shadow_Jump Start_000.png" id="20_6pogt"]
 [ext_resource type="Texture2D" uid="uid://e20q38j4bfpd" path="res://Player/Sprite/farena/Jump Start/0_Necromancer_of_the_Shadow_Jump Start_001.png" id="21_ie76m"]
 [ext_resource type="Texture2D" uid="uid://ddmvmskvk4yqb" path="res://Player/Sprite/farena/Jump Start/0_Necromancer_of_the_Shadow_Jump Start_002.png" id="22_dy65m"]
@@ -79,6 +91,7 @@
 [ext_resource type="Texture2D" uid="uid://cbbej6qn2btmy" path="res://Player/Sprite/farena/Slashing/0_Necromancer_of_the_Shadow_Slashing_010.png" id="54_32uw3"]
 [ext_resource type="Texture2D" uid="uid://ceo5lj4wb5rrs" path="res://Player/Sprite/farena/Slashing/0_Necromancer_of_the_Shadow_Slashing_011.png" id="55_ac8n6"]
 [ext_resource type="Script" uid="uid://cv4jeaf55pmuj" path="res://Player/States/attack.gd" id="67_x0uyb"]
+[ext_resource type="Script" uid="uid://ututexx85uxl" path="res://Player/States/hurt.gd" id="80_11slg"]
 [ext_resource type="PackedScene" uid="uid://ci48dtaw2atde" path="res://Player/touch_control.tscn" id="80_11wp0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d30e8"]
@@ -111,10 +124,46 @@ animations = [{
 "name": &"Fall",
 "speed": 8.0
 }, {
-"frames": [],
-"loop": true,
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_c7st8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8h25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_2krxc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_mw2es")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_p7odc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_beqdq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_get7g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_pfstq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_tklvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_gv7t5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_hhxpw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ghd3c")
+}],
+"loop": false,
 "name": &"Hurt",
-"speed": 5.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -362,9 +411,9 @@ script = ExtResource("1_l8h54")
 position = Vector2(5.960465e-07, 1.0000008)
 scale = Vector2(0.06, 0.07777778)
 sprite_frames = SubResource("SpriteFrames_d30e8")
-animation = &"J_Slashing"
-frame = 5
-frame_progress = 0.4182488
+animation = &"Hurt"
+frame = 6
+frame_progress = 0.253733
 
 [node name="CollisionStand" type="CollisionShape2D" parent="." unique_id=1626635028]
 position = Vector2(-0.5, 1.25)
@@ -399,6 +448,10 @@ script = ExtResource("6_fhl08")
 [node name="Attack" type="Node" parent="States" unique_id=1901431560]
 unique_name_in_owner = true
 script = ExtResource("67_x0uyb")
+
+[node name="Hurt" type="Node" parent="States" unique_id=1448902370]
+unique_name_in_owner = true
+script = ExtResource("80_11slg")
 
 [node name="Label" type="Label" parent="." unique_id=1156996546]
 visible = false

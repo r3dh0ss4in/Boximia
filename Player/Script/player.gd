@@ -98,3 +98,9 @@ func attack_():
 	new_ik.global_position=attack.global_position
 	get_parent().add_child(new_ik)
 	
+func take_damage():
+	if curr_state is PlayerStateHurt:
+		return
+	var hurt_state=%Hurt
+	if hurt_state:
+		change_state(hurt_state)

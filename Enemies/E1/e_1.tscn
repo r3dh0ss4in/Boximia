@@ -184,7 +184,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("27_r7qps")
 }],
-"loop": true,
+"loop": false,
 "name": &"Dead",
 "speed": 12.0
 }, {
@@ -428,9 +428,7 @@ script = ExtResource("1_tc81p")
 position = Vector2(0, -5.000004)
 scale = Vector2(0.0955556, 0.104444414)
 sprite_frames = SubResource("SpriteFrames_4puxi")
-animation = &"Walk"
-frame = 19
-frame_progress = 0.9863478
+animation = &"Attack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=851804455]
 position = Vector2(0, 2)

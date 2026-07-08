@@ -9,6 +9,8 @@ var current_state: State=State.PATROL:
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var label: Label = $Label
 @onready var attk: Marker2D = $Attack
+@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
+@onready var collision_shape_2d_: CollisionShape2D = $AttackArea/CollisionShape2D
 
 
 var direction: float = 1.0 
@@ -17,7 +19,7 @@ var current_health: int
 
 @export var SPEED:float=80.0
 @export var CHASE_SPEED:float=80
-@export var MAX_HEALTH:int=50
+@export var MAX_HEALTH:int=100
 
 
 func _ready() -> void:
@@ -66,13 +68,14 @@ func hurt():
 	velocity.x=0
 	animated_sprite_2d.play("Hurt")
 	await get_tree().create_timer(1).timeout
-	current_state=State.CHASE
+	current_state=State.ATTACK
 	
 
 func take_damage():
 	if current_health<=0:
 		return
 	current_health-=Power.amount
+	print(current_health)
 	if current_health<=0:
 		current_state=State.DEAD
 	else:
@@ -81,7 +84,10 @@ func take_damage():
 func die():
 	velocity.x=0
 	animated_sprite_2d.play("Dead")
-	await get_tree().create_timer(1).timeout
+	attk.visible=false
+	collision_shape_2d.visible=false
+	set_physics_process(false)
+	await get_tree().create_timer(2).timeout
 	queue_free()
 
 func change_direction():
@@ -106,12 +112,14 @@ func _update_state_label():
 			label.text = "ATTACK"
 		State.HURT:
 			label.text = "HURT"
+		State.DEAD:
+			label.text= "DEAD"
 
 
 func _on_player_detector_body_entered(body: Node2D) -> void:
 	if body is Player:
 		player_ref=body
-		if current_state not in [State.ATTACK,State.HURT]:
+		if current_state not in [State.ATTACK,State.HURT,State.DEAD]:
 			current_state=State.CHASE
 
 

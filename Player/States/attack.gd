@@ -29,12 +29,6 @@ func handle_input(_event:InputEvent) -> PlayerState:
 func process(delta:float) -> PlayerState:
 	return next_state
 
-#func shoot():
-	#const atk=preload("res://General/Scenes/ohho_rock.tscn")
-	#var new_atk=atk.instantiate()
-	#new_ik.global_position=atc.global_position
-	#get_parent().add_child(new_atk)
-# What happens when physics_process tick in this state?
 func physics_process(delta:float) -> PlayerState:
 	player.velocity.x-=player.velocity.x*5*delta
 	return next_state
