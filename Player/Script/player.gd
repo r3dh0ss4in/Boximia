@@ -37,7 +37,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	change_state(curr_state.handle_input(event))
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("shoot"):
+	if Input.is_action_just_released("shoot"):
 		attack_()
 	update_direction()
 	change_state(curr_state.process(delta))

@@ -20,18 +20,6 @@ size = Vector2(107, 29)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cjfep"]
 size = Vector2(38, 65)
 
-[sub_resource type="Gradient" id="Gradient_11wp0"]
-offsets = PackedFloat32Array(0, 0.0060241222, 0.8192771, 0.9939759, 1)
-colors = PackedColorArray(1, 1, 1, 1, 0.5582664, 0.5582664, 0.5582664, 1, 0.15334398, 0.15334398, 0.15334398, 1, 0.115107894, 0.115107894, 0.115107894, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_cjfep"]
-gradient = SubResource("Gradient_11wp0")
-width = 400
-height = 400
-fill = 2
-fill_from = Vector2(0.5043478, 0.5043478)
-fill_to = Vector2(0.93043476, 0.17391305)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iwwin"]
 size = Vector2(6.5, 66)
 
@@ -44,14 +32,14 @@ position = Vector2(640.5, 193.99998)
 scale = Vector2(0.7936198, 0.44726565)
 texture = ExtResource("1_gxvip")
 
-[node name="Store" type="Label" parent="." unique_id=2070632999]
-offset_left = 939.0
+[node name="Point" type="Label" parent="." unique_id=2070632999]
+offset_left = 946.0
 offset_top = 204.0
-offset_right = 1028.0
+offset_right = 1035.0
 offset_bottom = 227.0
 theme_override_fonts/font = ExtResource("3_fqeam")
 theme_override_font_sizes/font_size = 11
-text = "Takla Store"
+text = "Poob Par"
 
 [node name="Point_red" parent="." unique_id=102250165 instance=ExtResource("3_cjfep")]
 unique_name_in_owner = true
@@ -144,15 +132,6 @@ collision_mask = 16
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1847774330]
 position = Vector2(966, 250.5)
 shape = SubResource("RectangleShape2D_cjfep")
-
-[node name="PointLight2D" type="PointLight2D" parent="." unique_id=810268353]
-visible = false
-position = Vector2(108.000015, 196)
-rotation = 0.49741885
-scale = Vector2(0.36749995, 1.27375)
-energy = 4.0
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_cjfep")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=78678896]
 

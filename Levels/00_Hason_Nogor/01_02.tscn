@@ -8,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://do5bbbadoprra" path="res://Player/player.tscn" id="6_v238m"]
 [ext_resource type="PackedScene" uid="uid://j2euvcypbaky" path="res://General/Scenes/pause_menu.tscn" id="7_xto5w"]
 [ext_resource type="PackedScene" uid="uid://ovgdptqkxdto" path="res://Enemies/E1/e_1.tscn" id="8_d23rj"]
+[ext_resource type="FontFile" uid="uid://c27vw7oc3x4jd" path="res://General/Fonts/Gagalin-Regular.otf" id="9_dj2kv"]
+[ext_resource type="PackedScene" uid="uid://d2axb472na2te" path="res://General/Scenes/point_red.tscn" id="10_lc7ci"]
+[ext_resource type="PackedScene" uid="uid://dyub862n870fr" path="res://General/Scenes/point_green.tscn" id="11_mlbbb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xto5w"]
 size = Vector2(20, 259)
@@ -17,6 +20,12 @@ size = Vector2(12.5, 198)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t2c55"]
 size = Vector2(43.5, 80.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8n55p"]
+size = Vector2(36, 211.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gwncp"]
+size = Vector2(38, 65)
 
 [node name="01_02" type="Node2D" unique_id=2122756718]
 script = ExtResource("1_v238m")
@@ -50,9 +59,9 @@ scale = Vector2(0.13541667, 0.3709834)
 texture = ExtResource("4_v238m")
 
 [node name="Shado5" type="Sprite2D" parent="." unique_id=1536683051]
-position = Vector2(1149, 151.35385)
+position = Vector2(1206.9784, 151.35385)
 rotation = 3.1415927
-scale = Vector2(0.13541667, 0.35219833)
+scale = Vector2(0.059924003, 0.35219833)
 texture = ExtResource("4_v238m")
 
 [node name="Level_Bounds" type="Node2D" parent="." unique_id=918192199]
@@ -78,7 +87,7 @@ shape = SubResource("RectangleShape2D_xto5w")
 [node name="PauseMenu" parent="CanvasLayer" unique_id=151461185 instance=ExtResource("7_xto5w")]
 
 [node name="E1" parent="." unique_id=1195474954 instance=ExtResource("8_d23rj")]
-position = Vector2(912, 191)
+position = Vector2(913, 198)
 
 [node name="e_wall" type="StaticBody2D" parent="." unique_id=2110751874]
 position = Vector2(-7, -6)
@@ -105,5 +114,52 @@ collision_mask = 16
 position = Vector2(391.25, 199.125)
 shape = SubResource("RectangleShape2D_t2c55")
 
+[node name="Point" type="Label" parent="." unique_id=872820615]
+offset_left = 952.0
+offset_top = 151.0
+offset_right = 1041.0
+offset_bottom = 174.0
+theme_override_fonts/font = ExtResource("9_dj2kv")
+theme_override_font_sizes/font_size = 11
+text = "Samar Bari"
+
+[node name="Point_red" parent="." unique_id=102250165 instance=ExtResource("10_lc7ci")]
+unique_name_in_owner = true
+position = Vector2(977, 196)
+
+[node name="Point_green" parent="." unique_id=463335962 instance=ExtResource("11_mlbbb")]
+unique_name_in_owner = true
+visible = false
+position = Vector2(977, 196)
+
+[node name="Door" type="AnimatableBody2D" parent="." unique_id=1258414656]
+z_index = -2
+position = Vector2(530, 39)
+collision_layer = 64
+collision_mask = 16
+
+[node name="ColorRect" type="ColorRect" parent="Door" unique_id=1756973268]
+offset_left = 681.0
+offset_top = -14.0
+offset_right = 717.0
+offset_bottom = 198.0
+color = Color(0.37254903, 0.37254903, 0.37254903, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=2104959346]
+light_mask = 0
+visibility_layer = 16
+position = Vector2(698, 93)
+shape = SubResource("RectangleShape2D_8n55p")
+
+[node name="Area2D3" type="Area2D" parent="." unique_id=354125147]
+position = Vector2(11, -53)
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3" unique_id=309362873]
+position = Vector2(966, 250.5)
+shape = SubResource("RectangleShape2D_gwncp")
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="Area2D3" to="." method="_on_area_2d_3_body_entered"]
