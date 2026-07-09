@@ -90,7 +90,6 @@ tile_set = ExtResource("1_jkad5")
 
 [node name="Player" parent="." unique_id=679804264 instance=ExtResource("2_fqjxr")]
 position = Vector2(83.99994, 219.99997)
-collision_mask = 71
 
 [node name="Shado2" type="Sprite2D" parent="." unique_id=993268922]
 position = Vector2(152.99998, 227.99997)
@@ -159,13 +158,6 @@ texture = SubResource("GradientTexture2D_cjfep")
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=151461185 instance=ExtResource("10_fqeam")]
 
-[node name="tmp" type="Label" parent="." unique_id=765052125]
-offset_left = 644.0
-offset_top = 121.0
-offset_right = 905.0
-offset_bottom = 144.0
-text = "Make takla store green then go up"
-
 [node name="Area2D3" type="Area2D" parent="." unique_id=1679845561]
 position = Vector2(713, 5)
 collision_layer = 0
@@ -179,7 +171,7 @@ shape = SubResource("RectangleShape2D_iwwin")
 position = Vector2(929, 77)
 
 [node name="rock2" type="Marker2D" parent="." unique_id=868782199]
-position = Vector2(968, 66)
+position = Vector2(955, -32)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

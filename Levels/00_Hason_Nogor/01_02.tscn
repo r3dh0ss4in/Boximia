@@ -15,6 +15,9 @@ size = Vector2(20, 259)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d23rj"]
 size = Vector2(12.5, 198)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t2c55"]
+size = Vector2(43.5, 80.25)
+
 [node name="01_02" type="Node2D" unique_id=2122756718]
 script = ExtResource("1_v238m")
 
@@ -74,18 +77,11 @@ shape = SubResource("RectangleShape2D_xto5w")
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=151461185 instance=ExtResource("7_xto5w")]
 
-[node name="tmp" type="Label" parent="." unique_id=763760820]
-offset_left = 578.0
-offset_top = 154.0
-offset_right = 839.0
-offset_bottom = 203.0
-text = "Right
-"
-
 [node name="E1" parent="." unique_id=1195474954 instance=ExtResource("8_d23rj")]
-position = Vector2(919, 197)
+position = Vector2(912, 191)
 
 [node name="e_wall" type="StaticBody2D" parent="." unique_id=2110751874]
+position = Vector2(-7, -6)
 collision_layer = 128
 collision_mask = 64
 
@@ -97,4 +93,17 @@ shape = SubResource("RectangleShape2D_d23rj")
 position = Vector2(668.25, 155)
 shape = SubResource("RectangleShape2D_d23rj")
 
+[node name="snow" type="Marker2D" parent="." unique_id=1195577062]
+z_index = 2
+position = Vector2(391, 226)
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=1021090059]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=620995616]
+position = Vector2(391.25, 199.125)
+shape = SubResource("RectangleShape2D_t2c55")
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

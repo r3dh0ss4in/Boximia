@@ -4,6 +4,7 @@ extends Control
 @onready var resume_: Button = %Resume
 @onready var health_lbl: Label = $HBoxContainer3/health_lbl
 @onready var max_health_lbl: Label = $HBoxContainer3/max_health_lbl
+@onready var strength_lbl: Label = $HBoxContainer3/power
 
 func pause():
 	show()
@@ -11,6 +12,7 @@ func pause():
 	resume_.grab_focus()
 	health_lbl.text=str(PlayerHealth.health)
 	max_health_lbl.text=str(PlayerHealth.max_health)
+	strength_lbl.text=str(Power.amount)
 	animation_player.play("blur")
 
 func resume():
@@ -37,12 +39,16 @@ func _on_resume_pressed() -> void:
 	resume()
 
 
-func _on_quit_pressed() -> void:
-	get_tree().quit()
 
 
 func _on_home_pressed() -> void:
 	resume()
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
+	PlayerHealth.health=50
+	PlayerHealth.max_health=50
+	Power.amount=10
+	Items.items=0
 	get_tree().change_scene_to_file("res://Title Screen/tilte.tscn")
 
 
@@ -55,4 +61,21 @@ func _on_health_pressed() -> void:
 func _on_strong_pressed() -> void:
 	if(Items.items>=20):
 		PlayerHealth.max_health+=5
+		Items.items-=20
+
+
+func _on_retry_pressed() -> void:
+	resume()
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
+	PlayerHealth.health=50
+	PlayerHealth.max_health=50
+	Power.amount=10
+	Items.items=0
+	get_tree().change_scene_to_file("res://Levels/00_Hason_Nogor/01.tscn")
+
+
+func _on_power_pressed() -> void:
+	if(Items.items>=20):
+		Power.amount+=5
 		Items.items-=20
