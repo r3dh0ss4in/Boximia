@@ -7,9 +7,13 @@
 [ext_resource type="PackedScene" uid="uid://do5bbbadoprra" path="res://Player/player.tscn" id="4_lqs4w"]
 [ext_resource type="Texture2D" uid="uid://bscwskvydiv3k" path="res://Levels/shado_2.png" id="4_lw4nh"]
 [ext_resource type="PackedScene" uid="uid://j2euvcypbaky" path="res://General/Scenes/pause_menu.tscn" id="7_lw4nh"]
+[ext_resource type="PackedScene" uid="uid://ovgdptqkxdto" path="res://Enemies/E2/e_2.tscn" id="8_6u214"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lw4nh"]
 size = Vector2(233.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6u214"]
+size = Vector2(16, 198)
 
 [node name="0103" type="Node2D" unique_id=1188456583]
 script = ExtResource("1_cq01e")
@@ -76,5 +80,21 @@ offset_top = 140.0
 offset_right = 1135.0
 offset_bottom = 163.0
 text = "Down"
+
+[node name="E2" parent="." unique_id=1195474954 instance=ExtResource("8_6u214")]
+position = Vector2(551, 197)
+
+[node name="e_wall" type="StaticBody2D" parent="." unique_id=2133447641]
+position = Vector2(-7, -6)
+collision_layer = 128
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="e_wall" unique_id=1406577107]
+position = Vector2(750, 157)
+shape = SubResource("RectangleShape2D_6u214")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="e_wall" unique_id=1747831787]
+position = Vector2(213, 155)
+shape = SubResource("RectangleShape2D_6u214")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

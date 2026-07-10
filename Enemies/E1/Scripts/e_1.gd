@@ -75,7 +75,6 @@ func take_damage():
 	if current_health<=0:
 		return
 	current_health-=Power.amount
-	print(current_health)
 	if current_health<=0:
 		current_state=State.DEAD
 	else:

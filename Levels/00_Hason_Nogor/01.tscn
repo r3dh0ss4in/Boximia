@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dyub862n870fr" path="res://General/Scenes/point_green.tscn" id="4_fqeam"]
 [ext_resource type="Script" uid="uid://f4npxarc848j" path="res://General/Scripts/Level_Bounds.gd" id="8_nhegs"]
 [ext_resource type="PackedScene" uid="uid://j2euvcypbaky" path="res://General/Scenes/pause_menu.tscn" id="10_fqeam"]
+[ext_resource type="PackedScene" uid="uid://e374l1x5dalm" path="res://Enemies/Training/training.tscn" id="11_doun2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fqeam"]
 size = Vector2(167, 37)
@@ -151,6 +152,9 @@ position = Vector2(929, 77)
 
 [node name="rock2" type="Marker2D" parent="." unique_id=868782199]
 position = Vector2(955, -32)
+
+[node name="Training" parent="." unique_id=1067677795 instance=ExtResource("11_doun2")]
+position = Vector2(520, 255)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
