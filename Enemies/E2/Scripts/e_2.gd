@@ -84,7 +84,7 @@ func die():
 	velocity.x=0
 	animated_sprite_2d.play("Dead")
 	attk.visible=false
-	Items.items+=20
+	Items.items+=30
 	collision_shape_2d.visible=false
 	set_physics_process(false)
 	await get_tree().create_timer(2).timeout

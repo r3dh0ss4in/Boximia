@@ -7,9 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://bscwskvydiv3k" path="res://Levels/shado_2.png" id="4_v238m"]
 [ext_resource type="PackedScene" uid="uid://do5bbbadoprra" path="res://Player/player.tscn" id="6_v238m"]
 [ext_resource type="PackedScene" uid="uid://j2euvcypbaky" path="res://General/Scenes/pause_menu.tscn" id="7_xto5w"]
-[ext_resource type="PackedScene" uid="uid://ovgdptqkxdto" path="res://Enemies/E1/e_1.tscn" id="8_d23rj"]
 [ext_resource type="FontFile" uid="uid://c27vw7oc3x4jd" path="res://General/Fonts/Gagalin-Regular.otf" id="9_dj2kv"]
 [ext_resource type="PackedScene" uid="uid://d2axb472na2te" path="res://General/Scenes/point_red.tscn" id="10_lc7ci"]
+[ext_resource type="PackedScene" uid="uid://4lddiskbsx5e" path="res://Enemies/E1/e_1.tscn" id="11_dj2kv"]
 [ext_resource type="PackedScene" uid="uid://dyub862n870fr" path="res://General/Scenes/point_green.tscn" id="11_mlbbb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xto5w"]
@@ -86,20 +86,17 @@ shape = SubResource("RectangleShape2D_xto5w")
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=151461185 instance=ExtResource("7_xto5w")]
 
-[node name="E1" parent="." unique_id=1195474954 instance=ExtResource("8_d23rj")]
-position = Vector2(913, 198)
-
 [node name="e_wall" type="StaticBody2D" parent="." unique_id=2110751874]
 position = Vector2(-7, -6)
 collision_layer = 128
 collision_mask = 64
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="e_wall" unique_id=80483623]
-position = Vector2(1211, 160)
+position = Vector2(1202, 153)
 shape = SubResource("RectangleShape2D_d23rj")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="e_wall" unique_id=2099478167]
-position = Vector2(668.25, 155)
+position = Vector2(667, 154)
 shape = SubResource("RectangleShape2D_d23rj")
 
 [node name="snow" type="Marker2D" parent="." unique_id=1195577062]
@@ -159,6 +156,9 @@ collision_mask = 16
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3" unique_id=309362873]
 position = Vector2(966, 250.5)
 shape = SubResource("RectangleShape2D_gwncp")
+
+[node name="E1" parent="." unique_id=99532942 instance=ExtResource("11_dj2kv")]
+position = Vector2(948, 203)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

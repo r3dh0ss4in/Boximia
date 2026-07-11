@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ovgdptqkxdto"]
+[gd_scene format=3 uid="uid://4lddiskbsx5e"]
 
 [ext_resource type="Texture2D" uid="uid://b51xftqqirjco" path="res://Enemies/E1/Sprite/Slashing/0_Golem_Slashing_000.png" id="1_g5h43"]
 [ext_resource type="Script" uid="uid://djphrv5fjbiux" path="res://Enemies/E1/Scripts/e_1.gd" id="1_tc81p"]
@@ -95,7 +95,7 @@
 [ext_resource type="Texture2D" uid="uid://xrtxdmyx0n5p" path="res://Enemies/E1/Sprite/Running/0_Golem_Running_010.png" id="69_t0mtm"]
 [ext_resource type="Texture2D" uid="uid://ccvrkq8mxeded" path="res://Enemies/E1/Sprite/Running/0_Golem_Running_011.png" id="70_p5myn"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_4puxi"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_tc81p"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -407,58 +407,57 @@ animations = [{
 "speed": 18.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hx50r"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r7qps"]
 radius = 12.0
 height = 44.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fq5si"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_17rpn"]
 radius = 26.0
 height = 278.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_53c4y"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_mxj7p"]
 radius = 38.63936
 
-[node name="E1" type="CharacterBody2D" unique_id=1195474954]
-z_index = -1
+[node name="E1" type="CharacterBody2D" unique_id=99532942]
 collision_layer = 64
 collision_mask = 129
 script = ExtResource("1_tc81p")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=985520905]
-position = Vector2(0, -5.000004)
-scale = Vector2(0.0955556, 0.104444414)
-sprite_frames = SubResource("SpriteFrames_4puxi")
-animation = &"Attack"
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=492618793]
+position = Vector2(4.5895576e-05, -2.0000153)
+scale = Vector2(0.086666666, 0.09166667)
+sprite_frames = SubResource("SpriteFrames_tc81p")
+animation = &"Walk"
+frame_progress = 0.61554044
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=851804455]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1301251957]
 position = Vector2(0, 2)
-shape = SubResource("CapsuleShape2D_hx50r")
+shape = SubResource("CapsuleShape2D_r7qps")
 
-[node name="PlayerDetector" type="Area2D" parent="." unique_id=342543550]
+[node name="PlayerDetector" type="Area2D" parent="." unique_id=1969224642]
 collision_layer = 0
 collision_mask = 16
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector" unique_id=2100364864]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector" unique_id=1447998622]
 rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_fq5si")
+shape = SubResource("CapsuleShape2D_17rpn")
 
-[node name="AttackArea" type="Area2D" parent="." unique_id=962577783]
+[node name="AttackArea" type="Area2D" parent="." unique_id=1760761194]
 collision_layer = 0
 collision_mask = 16
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=732991770]
-shape = SubResource("CircleShape2D_53c4y")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=1141830123]
+shape = SubResource("CircleShape2D_mxj7p")
 
-[node name="Label" type="Label" parent="." unique_id=1522346447]
+[node name="Label" type="Label" parent="." unique_id=1031379182]
 offset_right = 40.0
 offset_bottom = 23.0
 
-[node name="Attack" type="Marker2D" parent="." unique_id=396668290]
+[node name="Attack" type="Marker2D" parent="." unique_id=2128250861]
 
-[node name="Timer" type="Timer" parent="." unique_id=160989080]
+[node name="Timer" type="Timer" parent="." unique_id=1794543258]
 autostart = true
 
-[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="PlayerDetector" to="." method="_on_player_detector_body_entered"]
 [connection signal="body_exited" from="PlayerDetector" to="." method="_on_player_detector_body_exited"]
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
