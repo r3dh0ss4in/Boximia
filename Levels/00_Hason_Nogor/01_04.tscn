@@ -8,9 +8,13 @@
 [ext_resource type="Texture2D" uid="uid://dotqyvj0uw6u8" path="res://Levels/Hason Nogor/Tileset/01_04_bg.png" id="5_xkt2s"]
 [ext_resource type="TileSet" uid="uid://1kr8vdmarlj2" path="res://Levels/Hason Nogor/Tileset/Hason_Nogor_2.tres" id="7_7k82k"]
 [ext_resource type="PackedScene" uid="uid://j2euvcypbaky" path="res://General/Scenes/pause_menu.tscn" id="8_63aow"]
+[ext_resource type="PackedScene" uid="uid://cc30q77hyplvy" path="res://Enemies/E3/e_3.tscn" id="9_aegp1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7k82k"]
 size = Vector2(20, 246)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aegp1"]
+size = Vector2(12.5, 198)
 
 [node name="01_04" type="Node2D" unique_id=475610246]
 script = ExtResource("1_loi3g")
@@ -77,11 +81,20 @@ tile_set = ExtResource("7_7k82k")
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=151461185 instance=ExtResource("8_63aow")]
 
-[node name="tmp" type="Label" parent="." unique_id=1186599818]
-offset_left = 916.0
-offset_top = 104.0
-offset_right = 1177.0
-offset_bottom = 127.0
-text = "Right"
+[node name="E3" parent="." unique_id=1922451966 instance=ExtResource("9_aegp1")]
+position = Vector2(458, 72)
+
+[node name="e_wall" type="StaticBody2D" parent="." unique_id=541573709]
+position = Vector2(-7, -6)
+collision_layer = 128
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="e_wall" unique_id=1640121093]
+position = Vector2(719, 58)
+shape = SubResource("RectangleShape2D_aegp1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="e_wall" unique_id=1997627780]
+position = Vector2(273, 72)
+shape = SubResource("RectangleShape2D_aegp1")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

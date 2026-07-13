@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://n4b3h6yvljiq"]
+
+[ext_resource type="Script" uid="uid://cs7pluny46c2y" path="res://Enemies/E3/e_3_attack.gd" id="1_g6dtg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eyt7e"]
+size = Vector2(137, 20)
+
+[node name="e3_attack" type="Area2D" unique_id=353897573]
+collision_layer = 0
+collision_mask = 16
+script = ExtResource("1_g6dtg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=297906463]
+shape = SubResource("RectangleShape2D_eyt7e")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

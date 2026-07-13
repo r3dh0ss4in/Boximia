@@ -13,7 +13,7 @@
 size = Vector2(233.5, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6u214"]
-size = Vector2(16, 198)
+size = Vector2(12.5, 198)
 
 [node name="0103" type="Node2D" unique_id=1188456583]
 script = ExtResource("1_cq01e")
@@ -74,23 +74,20 @@ shape = SubResource("RectangleShape2D_lw4nh")
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=151461185 instance=ExtResource("7_lw4nh")]
 
-[node name="tmp" type="Label" parent="." unique_id=1935755363]
-offset_left = 874.0
-offset_top = 140.0
-offset_right = 1135.0
-offset_bottom = 163.0
-text = "Down"
-
 [node name="E2" parent="." unique_id=1195474954 instance=ExtResource("8_6u214")]
 position = Vector2(551, 197)
 
-[node name="e_wall" type="StaticBody2D" parent="." unique_id=2133447641]
+[node name="e_wall" type="StaticBody2D" parent="." unique_id=1402397511]
 position = Vector2(-7, -6)
 collision_layer = 128
 collision_mask = 64
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="e_wall" unique_id=1747831787]
-position = Vector2(213, 155)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="e_wall" unique_id=902959456]
+position = Vector2(738, 151)
+shape = SubResource("RectangleShape2D_6u214")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="e_wall" unique_id=1151167523]
+position = Vector2(221, 154)
 shape = SubResource("RectangleShape2D_6u214")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
