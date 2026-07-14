@@ -8,12 +8,16 @@
 [ext_resource type="Texture2D" uid="uid://bscwskvydiv3k" path="res://Levels/shado_2.png" id="5_mu1xq"]
 [ext_resource type="TileSet" uid="uid://1kr8vdmarlj2" path="res://Levels/Hason Nogor/Tileset/Hason_Nogor_2.tres" id="6_uf083"]
 [ext_resource type="PackedScene" uid="uid://j2euvcypbaky" path="res://General/Scenes/pause_menu.tscn" id="8_p13b1"]
+[ext_resource type="PackedScene" uid="uid://gt0n4hm0iscd" path="res://Enemies/E5/e_5.tscn" id="9_quxfs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p13b1"]
 size = Vector2(105, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3v7bc"]
 size = Vector2(41, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_quxfs"]
+size = Vector2(14.5, 198)
 
 [node name="02_02" type="Node2D" unique_id=1533213390]
 script = ExtResource("1_3v7bc")
@@ -87,19 +91,21 @@ shape = SubResource("RectangleShape2D_3v7bc")
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=151461185 instance=ExtResource("8_p13b1")]
 
-[node name="tmp" type="Label" parent="." unique_id=829369743]
-offset_left = 956.0
-offset_top = 123.0
-offset_right = 1217.0
-offset_bottom = 146.0
-text = "Left"
+[node name="e_wall" type="StaticBody2D" parent="." unique_id=1294669426]
+position = Vector2(-7, -6)
+collision_layer = 128
+collision_mask = 64
 
-[node name="tmp2" type="Label" parent="." unique_id=364989410]
-offset_left = 597.0
-offset_top = 43.0
-offset_right = 858.0
-offset_bottom = 66.0
-text = "UP"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="e_wall" unique_id=1947425130]
+position = Vector2(934, 185)
+shape = SubResource("RectangleShape2D_quxfs")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="e_wall" unique_id=1306145412]
+position = Vector2(487.75, 193)
+shape = SubResource("RectangleShape2D_quxfs")
+
+[node name="E5" parent="e_wall" unique_id=1635312326 instance=ExtResource("9_quxfs")]
+position = Vector2(637, 240)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

@@ -19,7 +19,7 @@ var current_health: int
 
 @export var SPEED:float=80.0
 @export var CHASE_SPEED:float=80
-@export var MAX_HEALTH:int=130
+@export var MAX_HEALTH:int=110
 
 
 func _ready() -> void:
@@ -87,6 +87,7 @@ func die():
 	Items.items+=70
 	collision_shape_2d.visible=false
 	set_physics_process(false)
+	attk.visible=false
 	await get_tree().create_timer(2).timeout
 	queue_free()
 
