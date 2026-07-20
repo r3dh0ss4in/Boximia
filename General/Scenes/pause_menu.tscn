@@ -159,9 +159,9 @@ grow_vertical = 2
 modulate = Color(0, 0, 0, 0)
 material = SubResource("ShaderMaterial_lun0m")
 layout_mode = 0
-offset_left = 327.0
+offset_left = 330.0
 offset_top = 72.0
-offset_right = 456.0
+offset_right = 459.0
 offset_bottom = 272.0
 
 [node name="Resume" type="Button" parent="HBoxContainer" unique_id=1393383923]
@@ -189,9 +189,9 @@ text = "Home"
 [node name="HBoxContainer2" type="VBoxContainer" parent="." unique_id=527327414]
 material = SubResource("ShaderMaterial_lun0m")
 layout_mode = 0
-offset_left = 105.0
+offset_left = 67.0
 offset_top = 72.0
-offset_right = 316.0
+offset_right = 320.0
 offset_bottom = 272.0
 
 [node name="Health" type="Button" parent="HBoxContainer2" unique_id=1809229869]
@@ -199,30 +199,30 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.93122005, 0, 0.24439275, 1)
 theme_override_fonts/font = ExtResource("3_ali22")
 theme_override_font_sizes/font_size = 30
-text = "Health +50"
+text = "Health +50(-10)"
 
 [node name="Strong" type="Button" parent="HBoxContainer2" unique_id=1542785817]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.93122005, 0, 0.24439275, 1)
 theme_override_fonts/font = ExtResource("3_ali22")
-theme_override_font_sizes/font_size = 30
-text = "Max Health +5"
+theme_override_font_sizes/font_size = 27
+text = "Max Health +5(-20)"
 
 [node name="Power" type="Button" parent="HBoxContainer2" unique_id=2044381992]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.93122005, 0, 0.24439275, 1)
 theme_override_fonts/font = ExtResource("3_ali22")
 theme_override_font_sizes/font_size = 30
-text = "Strength +5"
+text = "Strength +5(-20)"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=783815293]
 libraries/ = SubResource("AnimationLibrary_lolit")
 
 [node name="HBoxContainer3" type="VBoxContainer" parent="." unique_id=391316562]
 layout_mode = 0
-offset_left = 54.0
+offset_left = 22.0
 offset_top = 81.0
-offset_right = 116.0
+offset_right = 84.0
 offset_bottom = 277.0
 
 [node name="health_lbl" type="Label" parent="HBoxContainer3" unique_id=1266259200]

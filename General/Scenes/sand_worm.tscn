@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://jhmpvbk37edx"]
+
+[ext_resource type="Script" uid="uid://cqfybccwo8ekf" path="res://General/Scripts/sand_worm.gd" id="1_gb7bj"]
+[ext_resource type="Texture2D" uid="uid://wjf2fy7wa0k7" path="res://General/Images/Traps/Sandworm trap - Level 1.png" id="1_sph2w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gb7bj"]
+size = Vector2(28, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jasyb"]
+atlas = ExtResource("1_sph2w")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d8gx2"]
+atlas = ExtResource("1_sph2w")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxwb4"]
+atlas = ExtResource("1_sph2w")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttx2v"]
+atlas = ExtResource("1_sph2w")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xhks7"]
+atlas = ExtResource("1_sph2w")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1u05m"]
+atlas = ExtResource("1_sph2w")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bm8rq"]
+atlas = ExtResource("1_sph2w")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10tuk"]
+atlas = ExtResource("1_sph2w")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgld4"]
+atlas = ExtResource("1_sph2w")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ojvje"]
+atlas = ExtResource("1_sph2w")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wlj7k"]
+atlas = ExtResource("1_sph2w")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t1qmc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jasyb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d8gx2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jxwb4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ttx2v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xhks7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1u05m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bm8rq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10tuk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dgld4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ojvje")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wlj7k")
+}],
+"loop": false,
+"name": &"Idle",
+"speed": 10.0
+}]
+
+[node name="sand_worm" type="Area2D" unique_id=1582453728]
+collision_layer = 0
+collision_mask = 16
+script = ExtResource("1_gb7bj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1851279911]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_gb7bj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=587597514]
+sprite_frames = SubResource("SpriteFrames_t1qmc")
+animation = &"Idle"
+frame = 10
+frame_progress = 1.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var snow: Marker2D = $snow
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
@@ -16,3 +17,17 @@ func _on_area_2d_2_body_entered(body: Node2D) -> void:
 		PlayerHealth.health-=10
 		if PlayerHealth.health:
 			get_tree().reload_current_scene()
+
+
+func snow_():
+	const ik=preload("res://General/Scenes/snow_traps.tscn")
+	var new_ik=ik.instantiate()
+	new_ik.global_position=snow.global_position
+	get_parent().add_child(new_ik)
+
+
+
+
+func _on_area_2d_3_body_entered(body: Node2D) -> void:
+	if body is Player:
+		snow_()

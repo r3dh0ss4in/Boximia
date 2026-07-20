@@ -14,6 +14,9 @@ size = Vector2(25, 142)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_whubo"]
 size = Vector2(359, 22)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ou7ns"]
+size = Vector2(43.5, 80.25)
+
 [node name="02_03" type="Node2D" unique_id=1751200646]
 script = ExtResource("1_whubo")
 
@@ -80,12 +83,18 @@ shape = SubResource("RectangleShape2D_whubo")
 
 [node name="PauseMenu" parent="Area2D2/CanvasLayer" unique_id=151461185 instance=ExtResource("7_xp1jd")]
 
-[node name="tmp" type="Label" parent="." unique_id=312748928]
-offset_left = 617.0
-offset_top = 165.0
-offset_right = 878.0
-offset_bottom = 188.0
-text = "Right"
+[node name="snow" type="Marker2D" parent="." unique_id=291869230]
+z_index = 2
+position = Vector2(710, 227)
+
+[node name="Area2D3" type="Area2D" parent="." unique_id=111658545]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3" unique_id=1111304707]
+position = Vector2(710, 205)
+shape = SubResource("RectangleShape2D_ou7ns")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="Area2D3" to="." method="_on_area_2d_3_body_entered"]
