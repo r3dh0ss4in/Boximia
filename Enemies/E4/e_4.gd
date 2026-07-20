@@ -62,6 +62,10 @@ func chase():
 
 func attack():
 	velocity.x=0
+	if player_ref:
+		var dir_to_player = sign(player_ref.global_position.x - global_position.x)
+		if dir_to_player != 0:
+			update_facing(dir_to_player)
 	animated_sprite_2d.play("Attack")
 
 func hurt():
