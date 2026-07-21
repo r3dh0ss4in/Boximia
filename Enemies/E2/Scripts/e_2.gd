@@ -11,6 +11,8 @@ var current_state: State=State.PATROL:
 @onready var attk: Marker2D = $Attack
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var collision_shape_2d_: CollisionShape2D = $AttackArea/CollisionShape2D
+@onready var animated_sprite_2d_2: AnimatedSprite2D = $AnimatedSprite2D2
+@onready var health_bar: ProgressBar = $HealthBar
 
 
 var direction: float = 1.0 
@@ -24,6 +26,7 @@ var current_health: int
 
 func _ready() -> void:
 	current_health=MAX_HEALTH
+	animated_sprite_2d_2.hide()
 	animated_sprite_2d.animation_finished.connect(_on_animated_sprite_2d_animation_finished)
 
 func _physics_process(delta: float) -> void:
@@ -79,6 +82,7 @@ func take_damage():
 	if current_health<=0:
 		return
 	current_health-=Power.amount
+	health_bar.value=current_health
 	if current_health<=0:
 		current_state=State.DEAD
 	else:
@@ -87,6 +91,8 @@ func take_damage():
 func die():
 	velocity.x=0
 	animated_sprite_2d.play("Dead")
+	animated_sprite_2d_2.show()
+	animated_sprite_2d_2.play("Idle")
 	attk.visible=false
 	Items.items+=40
 	collision_shape_2d.visible=false

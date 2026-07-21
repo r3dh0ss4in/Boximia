@@ -93,6 +93,7 @@
 [ext_resource type="Script" uid="uid://cv4jeaf55pmuj" path="res://Player/States/attack.gd" id="67_x0uyb"]
 [ext_resource type="Script" uid="uid://ututexx85uxl" path="res://Player/States/hurt.gd" id="80_11slg"]
 [ext_resource type="PackedScene" uid="uid://ci48dtaw2atde" path="res://Player/touch_control.tscn" id="80_11wp0"]
+[ext_resource type="Texture2D" uid="uid://dmemwkdoprdj2" path="res://General/Images/health_sprite.png" id="94_i8h25"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d30e8"]
 animations = [{
@@ -401,6 +402,56 @@ height = 41.5
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_od3ui"]
 radius = 8.5
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_2krxc"]
+atlas = ExtResource("94_i8h25")
+region = Rect2(0, 0, 135, 333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mw2es"]
+atlas = ExtResource("94_i8h25")
+region = Rect2(135, 0, 135, 333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p7odc"]
+atlas = ExtResource("94_i8h25")
+region = Rect2(270, 0, 135, 333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_beqdq"]
+atlas = ExtResource("94_i8h25")
+region = Rect2(405, 0, 135, 333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_get7g"]
+atlas = ExtResource("94_i8h25")
+region = Rect2(540, 0, 135, 333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pfstq"]
+atlas = ExtResource("94_i8h25")
+region = Rect2(675, 0, 135, 333)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tklvp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2krxc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mw2es")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p7odc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_beqdq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_get7g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pfstq")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 8.0
+}]
+
 [node name="Player" type="CharacterBody2D" unique_id=679804264 groups=["Player"]]
 z_index = -1
 collision_layer = 16
@@ -479,3 +530,10 @@ position_smoothing_speed = 3.0
 
 [node name="Attack" type="Marker2D" parent="." unique_id=1178603723]
 position = Vector2(0, 8)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=302871730]
+position = Vector2(-5.0000005, -60)
+scale = Vector2(0.19999999, 0.256006)
+sprite_frames = SubResource("SpriteFrames_tklvp")
+animation = &"Idle"
+frame_progress = 0.4035269

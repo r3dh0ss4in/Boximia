@@ -5,6 +5,13 @@ extends Control
 @onready var health_lbl: Label = $HBoxContainer3/health_lbl
 @onready var max_health_lbl: Label = $HBoxContainer3/max_health_lbl
 @onready var strength_lbl: Label = $HBoxContainer3/power
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+
+func updtate_labels():
+	health_lbl.text=str(PlayerHealth.health)
+	max_health_lbl.text=str(PlayerHealth.max_health)
+	strength_lbl.text=str(Power.amount)
+	
 
 func pause():
 	show()
@@ -29,6 +36,7 @@ func esc():
 
 func _ready() -> void:
 	animation_player.play("RESET")
+	animated_sprite_2d.hide()
 	hide()
 
 func _process(delta: float) -> void:
@@ -54,14 +62,24 @@ func _on_home_pressed() -> void:
 
 func _on_health_pressed() -> void:
 	if(Items.items>=10 and PlayerHealth.health!=PlayerHealth.max_health):
+		animated_sprite_2d.show()
+		animated_sprite_2d.play("he")
 		PlayerHealth.health+=50
 		Items.items-=10
+		updtate_labels()
+		await get_tree().create_timer(2).timeout
+		animated_sprite_2d.hide()
 
 
 func _on_strong_pressed() -> void:
 	if(Items.items>=20):
+		animated_sprite_2d.show()
+		animated_sprite_2d.play("mh")
 		PlayerHealth.max_health+=5
 		Items.items-=20
+		updtate_labels()
+		await get_tree().create_timer(2).timeout
+		animated_sprite_2d.hide()
 
 
 func _on_retry_pressed() -> void:
@@ -77,5 +95,10 @@ func _on_retry_pressed() -> void:
 
 func _on_power_pressed() -> void:
 	if(Items.items>=20):
+		animated_sprite_2d.show()
+		animated_sprite_2d.play("st")
 		Power.amount+=5
 		Items.items-=20
+		updtate_labels()
+		await get_tree().create_timer(2).timeout
+		animated_sprite_2d.hide()

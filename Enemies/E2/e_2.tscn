@@ -94,6 +94,7 @@
 [ext_resource type="Texture2D" uid="uid://fy36jjw1elnj" path="res://Enemies/E2/Sprite/Walking/0_Golem_Walking_023.png" id="69_25vor"]
 [ext_resource type="Texture2D" uid="uid://bp6se7a0wtrwg" path="res://Enemies/E2/Sprite/Running/0_Golem_Running_010.png" id="69_t0mtm"]
 [ext_resource type="Texture2D" uid="uid://dm6gqpk4pqf00" path="res://Enemies/E2/Sprite/Running/0_Golem_Running_011.png" id="70_p5myn"]
+[ext_resource type="Texture2D" uid="uid://c5bo2bj78re64" path="res://General/Images/coins_sprite.png" id="95_7ojaw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4puxi"]
 animations = [{
@@ -418,6 +419,54 @@ height = 278.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_53c4y"]
 radius = 38.63936
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7ojaw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ge5qe"]
+bg_color = Color(1, 0.5411765, 0.31764707, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17rpn"]
+atlas = ExtResource("95_7ojaw")
+region = Rect2(0, 0, 160, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxj7p"]
+atlas = ExtResource("95_7ojaw")
+region = Rect2(160, 0, 160, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rj55"]
+atlas = ExtResource("95_7ojaw")
+region = Rect2(320, 0, 160, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8pktn"]
+atlas = ExtResource("95_7ojaw")
+region = Rect2(480, 0, 160, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_603s3"]
+atlas = ExtResource("95_7ojaw")
+region = Rect2(640, 0, 160, 425)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ge5qe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_17rpn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxj7p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4rj55")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8pktn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_603s3")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 8.0
+}]
+
 [node name="E2" type="CharacterBody2D" unique_id=1195474954]
 z_index = -1
 collision_layer = 64
@@ -457,6 +506,22 @@ offset_bottom = 23.0
 
 [node name="Timer" type="Timer" parent="." unique_id=160989080]
 autostart = true
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=2019704849]
+offset_left = -22.0
+offset_top = -34.0
+offset_right = 22.0
+offset_bottom = -23.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_7ojaw")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ge5qe")
+value = 60.0
+show_percentage = false
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=1690283280]
+position = Vector2(1, -48)
+scale = Vector2(0.18125005, 0.13470595)
+sprite_frames = SubResource("SpriteFrames_ge5qe")
+animation = &"Idle"
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="PlayerDetector" to="." method="_on_player_detector_body_entered"]

@@ -19,6 +19,7 @@ var pre_state:PlayerState:
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite
 @onready var attack: Marker2D = $Attack
 @onready var label: Label = $Label
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 #endregion
 
 #region // Standard Variables
@@ -30,6 +31,7 @@ var direction:Vector2=Vector2.ZERO
 
 func _ready() -> void:
 	initialize_state()
+	animated_sprite_2d.hide()
 	#self.call_deferred("reparent",get_tree().root)
 	pass
 

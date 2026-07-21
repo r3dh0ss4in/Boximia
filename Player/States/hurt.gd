@@ -8,6 +8,8 @@ func init():
 	pass
 
 func enter():
+	player.animated_sprite_2d.show()
+	player.animated_sprite_2d.play("Idle")
 	player.animated_sprite.play("Hurt")
 	hurt_timer = hurt_duration
 	
@@ -22,6 +24,7 @@ func process(delta: float) -> PlayerState:
 	hurt_timer -= delta
 	# If time is up, transition to idle
 	if hurt_timer <= 0.0:
+		player.animated_sprite_2d.hide()
 		return idle
 	return next_state
 

@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://cr13ui1x8svva" path="res://General/Scripts/pause_menu.gd" id="1_p2r31"]
 [ext_resource type="Shader" uid="uid://vtdx60b11keg" path="res://General/Scenes/pause_menu.gdshader" id="2_pr2od"]
 [ext_resource type="FontFile" uid="uid://c8rqcausq07rh" path="res://General/Fonts/alagard.ttf" id="3_ali22"]
+[ext_resource type="Texture2D" uid="uid://csvvikboipy70" path="res://General/Images/health_p.png" id="4_lun0m"]
+[ext_resource type="Texture2D" uid="uid://baiqwitwrr6" path="res://General/Images/max_health_p.png" id="5_sxyxp"]
+[ext_resource type="Texture2D" uid="uid://0f12kyukvblj" path="res://General/Images/s_p.png" id="6_d5whu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ali22"]
 shader = ExtResource("2_pr2od")
@@ -135,6 +138,108 @@ _data = {
 &"blur": SubResource("Animation_d5whu")
 }
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxyxp"]
+atlas = ExtResource("4_lun0m")
+region = Rect2(0, 0, 200, 404)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d5whu"]
+atlas = ExtResource("4_lun0m")
+region = Rect2(200, 0, 200, 404)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lolit"]
+atlas = ExtResource("4_lun0m")
+region = Rect2(400, 0, 200, 404)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_splc3"]
+atlas = ExtResource("4_lun0m")
+region = Rect2(600, 0, 200, 404)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqvwg"]
+atlas = ExtResource("5_sxyxp")
+region = Rect2(0, 0, 191, 336)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jp515"]
+atlas = ExtResource("5_sxyxp")
+region = Rect2(191, 0, 191, 336)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_01bx7"]
+atlas = ExtResource("5_sxyxp")
+region = Rect2(382, 0, 191, 336)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3v0is"]
+atlas = ExtResource("5_sxyxp")
+region = Rect2(573, 0, 191, 336)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qtdg0"]
+atlas = ExtResource("6_d5whu")
+region = Rect2(0, 0, 175, 337)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0ddd"]
+atlas = ExtResource("6_d5whu")
+region = Rect2(175, 0, 175, 337)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dja7f"]
+atlas = ExtResource("6_d5whu")
+region = Rect2(350, 0, 175, 337)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8lkue"]
+atlas = ExtResource("6_d5whu")
+region = Rect2(525, 0, 175, 337)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pqvwg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxyxp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d5whu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lolit")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_splc3")
+}],
+"loop": true,
+"name": &"he",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pqvwg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jp515")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_01bx7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3v0is")
+}],
+"loop": true,
+"name": &"mh",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qtdg0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0ddd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dja7f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8lkue")
+}],
+"loop": true,
+"name": &"st",
+"speed": 7.0
+}]
+
 [node name="PauseMenu" type="Control" unique_id=151461185]
 process_mode = 3
 layout_mode = 3
@@ -245,6 +350,13 @@ size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("3_ali22")
 theme_override_font_sizes/font_size = 35
 text = "10"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=681349329]
+position = Vector2(209.31686, 79.94555)
+scale = Vector2(0.5725981, 0.344914)
+sprite_frames = SubResource("SpriteFrames_pqvwg")
+animation = &"st"
+frame_progress = 0.83037436
 
 [connection signal="pressed" from="HBoxContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="HBoxContainer/Retry" to="." method="_on_retry_pressed"]

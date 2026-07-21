@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cmjyw2rdtw2ck" path="res://Enemies/E4/Idle.png" id="5_1hrei"]
 [ext_resource type="Texture2D" uid="uid://c7clmxqp4c0dc" path="res://Enemies/E4/Pray.png" id="6_cjt3a"]
 [ext_resource type="Texture2D" uid="uid://cxf3kaol0su8q" path="res://Enemies/E4/Run.png" id="7_g86ni"]
+[ext_resource type="Texture2D" uid="uid://c5bo2bj78re64" path="res://General/Images/coins_sprite.png" id="8_q6ntw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pefcr"]
 atlas = ExtResource("2_q6ntw")
@@ -339,6 +340,49 @@ height = 454.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_tpsxw"]
 radius = 38.63936
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_17rpn"]
+atlas = ExtResource("8_q6ntw")
+region = Rect2(0, 0, 160, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxj7p"]
+atlas = ExtResource("8_q6ntw")
+region = Rect2(160, 0, 160, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rj55"]
+atlas = ExtResource("8_q6ntw")
+region = Rect2(320, 0, 160, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8pktn"]
+atlas = ExtResource("8_q6ntw")
+region = Rect2(480, 0, 160, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_603s3"]
+atlas = ExtResource("8_q6ntw")
+region = Rect2(640, 0, 160, 425)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_72h4l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_17rpn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxj7p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4rj55")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8pktn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_603s3")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 8.0
+}]
+
 [node name="E4" type="CharacterBody2D" unique_id=384343086]
 collision_layer = 64
 collision_mask = 129
@@ -376,6 +420,12 @@ offset_bottom = 23.0
 
 [node name="Timer" type="Timer" parent="." unique_id=1917954446]
 autostart = true
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=2106032305]
+position = Vector2(1, -48)
+scale = Vector2(0.18125005, 0.13470595)
+sprite_frames = SubResource("SpriteFrames_72h4l")
+animation = &"Idle"
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="PlayerDetector" to="." method="_on_player_detector_body_entered"]
