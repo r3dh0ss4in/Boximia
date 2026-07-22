@@ -85,11 +85,9 @@ pointing/emulate_touch_from_mouse=true
 
 [layer_names]
 
-2d_render/layer_1="Ground"
-2d_render/layer_2="F_Ground"
-2d_render/layer_5="Player"
 2d_physics/layer_1="Ground"
 2d_physics/layer_2="F_Ground"
+2d_physics/layer_4="Door"
 2d_physics/layer_5="Player"
 2d_physics/layer_7="Enemy"
 

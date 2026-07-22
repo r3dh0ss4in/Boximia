@@ -340,6 +340,11 @@ height = 454.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_tpsxw"]
 radius = 38.63936
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q6ntw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_72h4l"]
+bg_color = Color(1, 0.5411765, 0.31764707, 1)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_17rpn"]
 atlas = ExtResource("8_q6ntw")
 region = Rect2(0, 0, 160, 425)
@@ -420,6 +425,16 @@ offset_bottom = 23.0
 
 [node name="Timer" type="Timer" parent="." unique_id=1917954446]
 autostart = true
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=743341024]
+offset_left = -22.0
+offset_top = -34.0
+offset_right = 22.0
+offset_bottom = -23.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_q6ntw")
+theme_override_styles/fill = SubResource("StyleBoxFlat_72h4l")
+value = 60.0
+show_percentage = false
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=2106032305]
 position = Vector2(1, -48)

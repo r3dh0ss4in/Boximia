@@ -26,6 +26,9 @@ var current_health: int
 
 func _ready() -> void:
 	current_health=MAX_HEALTH
+	health_bar.min_value=0
+	health_bar.max_value=MAX_HEALTH
+	health_bar.value=current_health
 	animated_sprite_2d_2.hide()
 	animated_sprite_2d.animation_finished.connect(_on_animated_sprite_2d_animation_finished)
 

@@ -156,19 +156,19 @@ region = Rect2(600, 0, 200, 404)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pqvwg"]
 atlas = ExtResource("5_sxyxp")
-region = Rect2(0, 0, 191, 336)
+region = Rect2(0, 0, 180, 363)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jp515"]
 atlas = ExtResource("5_sxyxp")
-region = Rect2(191, 0, 191, 336)
+region = Rect2(180, 0, 180, 363)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_01bx7"]
 atlas = ExtResource("5_sxyxp")
-region = Rect2(382, 0, 191, 336)
+region = Rect2(360, 0, 180, 363)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3v0is"]
 atlas = ExtResource("5_sxyxp")
-region = Rect2(573, 0, 191, 336)
+region = Rect2(540, 0, 180, 363)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qtdg0"]
 atlas = ExtResource("6_d5whu")
@@ -355,8 +355,8 @@ text = "10"
 position = Vector2(209.31686, 79.94555)
 scale = Vector2(0.5725981, 0.344914)
 sprite_frames = SubResource("SpriteFrames_pqvwg")
-animation = &"st"
-frame_progress = 0.83037436
+animation = &"mh"
+frame_progress = 0.2158276
 
 [connection signal="pressed" from="HBoxContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="HBoxContainer/Retry" to="." method="_on_retry_pressed"]
