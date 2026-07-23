@@ -9,4 +9,6 @@ func _ready() -> void:
 	await get_tree().create_timer(4).timeout
 	TransitionScreen.transition()
 	await TransitionScreen.on_transition_finished
+	Items.visible=true
+	PlayerHealth.visible=true
 	get_tree().change_scene_to_file("res://Title Screen/tilte.tscn")
