@@ -11,8 +11,9 @@ config_version=5
 [application]
 
 config/name="Boximia"
-run/main_scene="uid://txdrwwfeu0of"
+run/main_scene="uid://bjm24wrln741p"
 config/features=PackedStringArray("4.6", "Forward Plus")
+boot_splash/show_image=false
 config/icon="uid://c30664tnwy65v"
 
 [autoload]

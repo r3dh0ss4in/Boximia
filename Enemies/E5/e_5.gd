@@ -11,6 +11,8 @@ var current_state: State=State.PATROL:
 @onready var attk: Marker2D = $Attack
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var collision_shape_2d_: CollisionShape2D = $AttackArea/CollisionShape2D
+@onready var health_bar: ProgressBar = $HealthBar
+@onready var animated_sprite_2d_2: AnimatedSprite2D = $AnimatedSprite2D2
 
 
 var direction: float = 1.0 
@@ -19,11 +21,15 @@ var current_health: int
 
 @export var SPEED:float=80.0
 @export var CHASE_SPEED:float=80
-@export var MAX_HEALTH:int=150
+@export var MAX_HEALTH:int=600
 
 
 func _ready() -> void:
 	current_health=MAX_HEALTH
+	health_bar.min_value=0
+	health_bar.max_value=MAX_HEALTH
+	health_bar.value=current_health
+	animated_sprite_2d_2.hide()
 	animated_sprite_2d.animation_finished.connect(_on_animated_sprite_2d_animation_finished)
 
 func _physics_process(delta: float) -> void:
@@ -79,6 +85,7 @@ func take_damage():
 	if current_health<=0:
 		return
 	current_health-=Power.amount
+	health_bar.value=current_health
 	if current_health<=0:
 		current_state=State.DEAD
 	else:
@@ -86,6 +93,8 @@ func take_damage():
 
 func die():
 	velocity.x=0
+	animated_sprite_2d_2.show()
+	animated_sprite_2d_2.play("Idle")
 	animated_sprite_2d.play("Dead")
 	attk.visible=false
 	Items.items+=60
@@ -163,7 +172,7 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 			current_state = State.CHASE
 
 func _attack():
-	const atk=preload("res://Enemies/E3/e_3_attack.tscn")
+	const atk=preload("res://Enemies/E5/e_5_attack.tscn")
 	var new_ik=atk.instantiate()
 	new_ik.global_position=attk.global_position
 	get_parent().add_child(new_ik)

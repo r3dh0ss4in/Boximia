@@ -4,6 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://ua35tn2y1e3x" path="res://00_Global/Player_Health/heart_frame.png" id="1_xusk1"]
 [ext_resource type="FontFile" uid="uid://cdgqai0rhc2j1" path="res://General/Fonts/LuckiestGuy-Regular.ttf" id="3_ofho0"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ofho0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xw2f"]
+bg_color = Color(0.76576334, 0, 0.200573, 1)
+
 [node name="PlayerHealth" type="CanvasLayer" unique_id=528265870]
 process_mode = 3
 layer = 101
@@ -25,9 +30,20 @@ texture = ExtResource("1_xusk1")
 
 [node name="Label" type="Label" parent="Control" unique_id=1481545099]
 layout_mode = 0
-offset_left = 18.0
-offset_top = 3.0
-offset_right = 97.0
-offset_bottom = 20.0
+offset_left = 103.0
+offset_top = 4.0
+offset_right = 182.0
+offset_bottom = 21.0
 theme_override_fonts/font = ExtResource("3_ofho0")
 text = "50"
+
+[node name="HealthBar" type="ProgressBar" parent="Control" unique_id=720762334]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 4.0
+offset_right = 99.0
+offset_bottom = 15.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_ofho0")
+theme_override_styles/fill = SubResource("StyleBoxFlat_0xw2f")
+value = 60.0
+show_percentage = false

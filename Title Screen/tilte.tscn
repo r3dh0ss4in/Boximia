@@ -153,14 +153,14 @@ offset_right = 406.0
 offset_bottom = 41.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/Logo" unique_id=1213733974]
-position = Vector2(-136, 57)
+position = Vector2(-132, 70)
 scale = Vector2(0.18695779, 0.17786084)
 sprite_frames = SubResource("SpriteFrames_hr3w0")
 animation = &"Idle"
 frame_progress = 0.33354238
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control" unique_id=2020579766]
-position = Vector2(54.562492, 185.3125)
+position = Vector2(48.562492, 185.31248)
 scale = Vector2(0.10541668, 0.14069445)
 sprite_frames = SubResource("SpriteFrames_4u6qs")
 animation = &"Idle"
@@ -220,10 +220,10 @@ theme_override_font_sizes/font_size = 20
 text = "Quit"
 
 [node name="Label" type="Label" parent="." unique_id=42318663]
-offset_left = 42.0
-offset_top = 7.0
-offset_right = 124.0
-offset_bottom = 38.0
+offset_left = 47.0
+offset_top = 22.0
+offset_right = 129.0
+offset_bottom = 53.0
 theme_override_fonts/font = ExtResource("31_0d7yi")
 theme_override_font_sizes/font_size = 25
 text = "BOXIMIA"

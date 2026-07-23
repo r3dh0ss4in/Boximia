@@ -21,7 +21,7 @@ var current_health: int
 
 @export var SPEED:float=80.0
 @export var CHASE_SPEED:float=80
-@export var MAX_HEALTH:int=110
+@export var MAX_HEALTH:int=400
 
 
 func _ready() -> void:

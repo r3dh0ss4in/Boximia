@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bjm24wrln741p"]
+
+[ext_resource type="Script" uid="uid://bar8vnpnsvrun" path="res://Title Screen/intro.gd" id="1_7rqn7"]
+[ext_resource type="Texture2D" uid="uid://d31boh7pcxipl" path="res://General/Images/Intro_1.png" id="1_v411t"]
+[ext_resource type="Texture2D" uid="uid://c1nd2jpt02mw2" path="res://General/Images/Intro_2.png" id="2_7rqn7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fnbes"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_v411t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7rqn7")
+}],
+"loop": false,
+"name": &"Idle",
+"speed": 0.5
+}]
+
+[node name="Intro" type="CanvasLayer" unique_id=2122184652]
+script = ExtResource("1_7rqn7")
+
+[node name="Control" type="Control" parent="." unique_id=1758789851]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control" unique_id=347823531]
+position = Vector2(240.99998, 135)
+scale = Vector2(0.38124996, 0.3861111)
+sprite_frames = SubResource("SpriteFrames_fnbes")
+animation = &"Idle"
+frame = 1
+frame_progress = 1.0

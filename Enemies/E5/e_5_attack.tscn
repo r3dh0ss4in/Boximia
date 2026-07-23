@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://lqlierntctu2"]
+
+[ext_resource type="Script" uid="uid://n1xijyjtisml" path="res://Enemies/E5/e_5_attack.gd" id="1_jpphm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h48si"]
+size = Vector2(137, 20)
+
+[node name="e_5_attack" type="Area2D" unique_id=488789642]
+collision_layer = 0
+collision_mask = 16
+script = ExtResource("1_jpphm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2080031102]
+shape = SubResource("RectangleShape2D_h48si")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
