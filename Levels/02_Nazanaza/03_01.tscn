@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://do5bbbadoprra" path="res://Player/player.tscn" id="5_vk52s"]
 [ext_resource type="TileSet" uid="uid://1kr8vdmarlj2" path="res://Levels/Hason Nogor/Tileset/Hason_Nogor_2.tres" id="7_yscoc"]
 [ext_resource type="PackedScene" uid="uid://j2euvcypbaky" path="res://General/Scenes/pause_menu.tscn" id="8_vk52s"]
+[ext_resource type="PackedScene" uid="uid://cseu214qiyf7q" path="res://Enemies/E6/e_6.tscn" id="9_vutix"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yscoc"]
 size = Vector2(211, 41)
@@ -17,6 +18,9 @@ size = Vector2(211, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vk52s"]
 size = Vector2(43.5, 80.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vutix"]
+size = Vector2(12.5, 198)
 
 [node name="03_01" type="Node2D" unique_id=1228000244]
 script = ExtResource("1_erb2a")
@@ -107,6 +111,22 @@ shape = SubResource("RectangleShape2D_vk52s")
 
 [node name="worm" type="Marker2D" parent="." unique_id=752170493]
 position = Vector2(639, 248)
+
+[node name="e_6" parent="." unique_id=1848065110 instance=ExtResource("9_vutix")]
+position = Vector2(464, 73)
+
+[node name="e_wall" type="StaticBody2D" parent="." unique_id=1555509204]
+position = Vector2(-7, -6)
+collision_layer = 128
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="e_wall" unique_id=1720292438]
+position = Vector2(719, 58)
+shape = SubResource("RectangleShape2D_vutix")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="e_wall" unique_id=1046643229]
+position = Vector2(273, 72)
+shape = SubResource("RectangleShape2D_vutix")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

@@ -2,15 +2,16 @@
 
 [ext_resource type="Script" uid="uid://d2mwj4jsvb1mv" path="res://Enemies/E2/Scripts/e_2_attack.gd" id="1_uvx6n"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sc3jw"]
-size = Vector2(137, 20)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uvx6n"]
+size = Vector2(115, 20)
 
 [node name="e2_attack" type="Area2D" unique_id=1740045180]
 collision_layer = 0
 collision_mask = 16
 script = ExtResource("1_uvx6n")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=301169757]
-shape = SubResource("RectangleShape2D_sc3jw")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=515394075]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_uvx6n")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
